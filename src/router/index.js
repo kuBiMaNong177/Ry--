@@ -13,7 +13,27 @@ const routes = [
   oneRouter,
   twoRouter,
   threeRouter,
-  fourRouter
+  fourRouter,
+  {
+    //登陆路由
+    path: '/denglu',
+    name: 'denglu',
+    component: () => import('../views/four/twoluyou/denglu.vue'),
+  },
+  {  //手机号登陆路由
+    path: '/phone',
+    name: 'phone',
+    component: () => import('@/views/four/twoluyou/phonelogin.vue'),
+  }, 
+  {  //手机号注册路由
+    path: '/enroll',
+    name: 'enroll',
+    component: () => import('@/views/four/twoluyou/enroll.vue'),
+  },{
+    path:'/verify',
+    name:'verify',
+    component: () => import('@/views/four/twoluyou/verify'),
+  }
 ]
 
 const router = new VueRouter({

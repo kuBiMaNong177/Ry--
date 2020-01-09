@@ -1,12 +1,12 @@
 <template>
    <header class="top">
-      header
+      11111
     </header>
 </template>
 <script>
-export default {
-  name:'Header'
-}
+
+
+
 </script>
 
 <style scoped>

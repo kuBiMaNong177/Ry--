@@ -1,27 +1,266 @@
 <template>
   <div class="main">
-    <Header></Header>
     <div class="content">
-      <h1>four 页面</h1>
+      <div class="header_fu">
+        <div class="header">
+          <span></span>
+          <span>账号</span>
+          <img src="../../images/2.svg" />
+        </div>
+      </div>
+      <div class="wrapper_276">
+        <div class="box_border">头像</div>
+        <div class="all">
+          <div class="text">名字</div>
+          <div class="grade">等级</div>
+        </div>
+        <button class="btn">签到</button>
+        <!-- 动态  关注  粉丝  我的资料组件 -->
+        <fans class="fans"></fans>
+      </div>
+      <van-index-anchor class="anchor_title_one"></van-index-anchor>
+      <div class="img_1">
+        <img src="../../images/3.svg" alt />
+        <span>我的消息</span>
+        <em>〉</em>
+      </div>
+
+      <van-index-anchor class="anchor_title_two"></van-index-anchor>
+      <div class="img_1">
+        <img src="../../images/4.png" alt />
+        <span>会员中心</span>
+        <em>〉</em>
+      </div>
+      <div class="img_1">
+        <img src="../../images/5.png" alt />
+        <span>商城</span>
+        <em>〉</em>
+      </div>
+      <div class="img_1">
+        <img src="../../images/6.png" alt />
+        <span>在线听歌免流量</span>
+        <em>〉</em>
+      </div>
+
+      <van-index-anchor class="anchor_title_three"></van-index-anchor>
+      <div class="img_1">
+        <img src="../../images/7.png" alt />
+        <span>设置</span>
+        <em>〉</em>
+      </div>
+      <div class="img_1">
+        <img src="../../images/8.png" alt />
+        <span>扫一扫</span>
+        <em>〉</em>
+      </div>
+      <div class="img_1">
+        <img src="../../images/9.png" alt />
+        <span>个性换肤</span>
+        <em>〉</em>
+      </div>
+      <div class="img_1">
+        <img src="../../images/10.png" alt />
+        <span>夜间模式</span>
+        <em>〉</em>
+      </div>
+      <div class="img_1">
+        <img src="../../images/11.png" alt />
+        <span>定时关闭</span>
+        <em>〉</em>
+      </div>
+      <div class="img_1">
+        <img src="../../images/12.png" alt />
+        <span>音乐闹钟</span>
+        <em>〉</em>
+      </div>
+      <div class="img_1">
+        <img src="../../images/13.png" alt />
+        <span>驾驶模式</span>
+        <em>〉</em>
+      </div>
+      <div class="img_1">
+        <img src="../../images/5.png" alt />
+        <span>宇天电台</span>
+        <em>〉</em>
+      </div>
+
+      <van-index-anchor class="anchor_title_four"></van-index-anchor>
+      <div class="img_1">
+        <img src="../../images/15.png" alt />
+        <span>分享宇天音乐</span>
+        <em>〉</em>
+      </div>
+      <div class="img_1">
+        <img src="../../images/16.png" alt />
+        <span>关于宇天音乐</span>
+        <em>〉</em>
+      </div>
+      <router-link to="/denglu">
+        <button @click="delebtn" class="btn_footer">退出登陆</button>
+      </router-link>
     </div>
-    <Footer></Footer>
+    <div class="footer_one">
+      <Footer></Footer>
+    </div>
   </div>
 </template>
 
 <script>
-
-import Footer from '@/components/footer/index.vue'
-import Header from '@/components/header/index.vue'
+import { Dialog } from 'vant'
+import fans from "@/views/four/module/index.vue";
+import Footer from "@/components/footer/index.vue";
 export default {
-  name:'Four',
+  name: "Four",
 
-  components:{
+  components: {
     Footer,
-    Header
+    fans
+  },
+  methods: {
+    delebtn() {
+      Dialog.confirm({
+      title: '宇天音乐',
+      message: '确认退出当前账号吗?'
+})
+        
+    }
   }
-}
+};
 </script>
 
 <style scoped>
+* {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  background: #eeeff0;
+  height: 61.1rem;
+}
+.header_fu {
+  width: 100%;
+  height: 3rem;
+}
+.header {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-around;
+  background: #c20c0c;
+  position: fixed;
+  z-index: 10;
+}
+.header span {
+  line-height: 2.5;
+  color: white;
+  font-size: 17px;
+}
+.header img {
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.4rem;
+  background: w;
+}
+/* 顶部父元素 */
+.wrapper_276 {
+  display: flex;
+  width: 100%;
+  height: 13.13rem;
+  background-color: rgba(255, 255, 255, 1);
+  position: relative;
+  top: -1.3rem;
+  justify-content: space-around;
+  border-top: 1px solid rgba(80, 80, 80, 1);
+}
+.box_border {
+  width: 4.85rem;
+  height: 4.85rem;
+  color: rgba(80, 80, 80, 1);
+  background-color: rgba(181, 181, 181, 1);
+  border-radius: 2.43rem;
+  font-size: 0.97rem;
+  margin-top: 2rem;
+}
+.all {
+  width: 4rem;
+  height: 4rem;
+  margin-top: 2rem;
+  margin-left: -20%;
+}
+.text {
+  width: 3rem;
+  height: 1.62rem;
+  color: rgba(0, 0, 0, 1);
+  font-size: 1.05rem;
+}
+.grade {
+  width: 3.23rem;
+  height: 1.62rem;
+  border: 1px solid rgba(128, 128, 128, 1);
+  color: rgba(128, 128, 128, 1);
+  box-shadow: rgba(128, 128, 128, 1) solid 0.08rem;
+  border-radius: 0.81rem;
+  font-size: 0.89rem;
+}
+.btn {
+  width: 3.66rem;
+  height: 1.63rem;
+  background: white;
+  border: 1px solid red;
+  border-radius: 50px 50px;
+  color: red;
+  text-align: center;
+  margin-top: 3.3rem;
+}
 
+.fans {
+  width: 100%;
+  position: absolute;
+}
+.van-cell {
+  height: 2.3rem;
+  line-height: 2.5;
+}
+.anchor_title_one {
+  margin-top: -10px;
+}
+.anchor_title_two {
+  margin-top: 10px;
+}
+.anchor_title_three {
+  margin-top: 10px;
+}
+.anchor_title_four {
+  margin-top: 10px;
+}
+.btn_footer {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  background: white;
+  margin-top: 10px;
+  color: red;
+}
+.img_1:active {
+  background: rgba(181, 181, 181, 1);
+}
+.btn_footer:active {
+  background: rgba(181, 181, 181, 1);
+}
+.img_1 {
+  background: white;
+  height: 2.6rem;
+  line-height: 2.6;
+}
+.img_1 img {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 0 10px;
+  margin-top: 11px;
+}
+.img_1 em {
+  float: right;
+}
 </style>
+

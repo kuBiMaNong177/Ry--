@@ -1,0 +1,106 @@
+<template>
+  <div class="over">
+    <div class="denglu">
+      <button @click="btns">〈</button>
+      <p>手机号注册</p>
+    </div>
+    <div class="input_1">
+      <img class="img" src="../../../images/phone.png" alt />
+      <em>+86</em>
+      <input class="ipt1" placeholder="手机号" type="text" />
+    </div>
+    <div class="input_2">
+      <img class="img_1" src="../../../images/password.png" alt />
+      <input class="ipt2" placeholder="设置登陆密码,不少于6位" type="password" />
+    </div>
+    <router-link :to="{name:'verify'}">
+        <button class="btn" >下一步</button>
+    </router-link>
+  </div>
+</template>
+<script>
+export default {
+    methods: {
+        btns(){
+            history.go(-1)
+        }
+    },
+};
+</script>
+<style scoped>
+.denglu {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.denglu p {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.denglu button {
+  position: absolute;
+  float: left;
+  margin-left: 6px;
+  font-size: 20px;
+  border: none;
+  background: white;
+}
+.ipt1 {
+  width: 78%;
+  margin-top: 30px;
+  height: 1.9rem;
+  border: none;
+  position: absolute;
+  top: -30px;
+  margin-left:5px
+}
+.input_1 {
+  border: solid 2px #ccc;
+  width: 80%;
+  height: 2rem;
+  position: relative;
+  top: 30px;
+  margin-left: 10%;
+}
+.input_1 em{line-height:2}
+.ipt2 {
+  width: 90%;
+  margin-top: 30px;
+  height: 1.9rem;
+  border: none;
+  position: absolute;
+  top: -30px;
+}
+.input_2 {
+  border: solid 2px #ccc;
+  width: 80%;
+  height: 2rem;
+  position: relative;
+  top: 60px;
+  margin-left: 10%;
+}
+
+.img {
+  width: 30px;
+  height: 30px;
+  float: left;
+}
+.img_1 {
+  width: 30px;
+  height: 30px;
+  float: left;
+}
+.btn {
+  width: 80%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 1);
+  color:white;
+  margin-top:90px;
+  margin-left:10%;
+  border:none
+}
+.over{
+    overflow-y:hidden;
+}
+</style>
