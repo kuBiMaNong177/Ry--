@@ -11,15 +11,8 @@
 </template>
 
 <script>
-<<<<<<< HEAD
 import Footer from "@/components/footer/index.vue";
-import Header from "@/components/header/index.vue";
-=======
-
-
-import Footer from '@/components/footer/index.vue'
-import Header from '@/views/one/header.vue'
->>>>>>> 2c01892e1b41c7e97fb57cafc4f2568b117cabc1
+import Header from "@/views/one/header.vue";
 
 export default {
   name: "One",
@@ -31,9 +24,4 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 2c01892e1b41c7e97fb57cafc4f2568b117cabc1
 </style>

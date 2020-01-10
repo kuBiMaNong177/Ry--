@@ -20,7 +20,6 @@
 </template>
 
 <script>
-<<<<<<< HEAD
 import Footer from "@/components/footer/index.vue";
 import Header from "@/components/header/index.vue";
 export default {
@@ -31,20 +30,6 @@ export default {
     Header
   }
 };
-</script>
-
-<style scoped>
-=======
-	import Footer from '@/components/footer/index.vue'
-	// import Header from '@/components/header/index.vue'
-	export default {
-		name: 'Three',
-
-		components: {
-			Footer
-			// Header
-		}
-	}
 </script>
 
 <style scoped>
@@ -82,5 +67,4 @@ export default {
 		border: #666666 solid 1px;
 		padding: 2px 10px;
 	}
->>>>>>> 2c01892e1b41c7e97fb57cafc4f2568b117cabc1
 </style>
