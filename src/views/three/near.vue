@@ -62,6 +62,7 @@
 		background-color: rgba(0, 0, 0, 0.3);
 		text-align: center;
 		width: 100%;
+		font-size: 0.875rem;
 	}
 
 	.banner>div:nth-child(2) {

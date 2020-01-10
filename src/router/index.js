@@ -12,7 +12,7 @@ Vue.use(VueRouter)
 
 const routes = [
   oneRouter,
-  twoRouter,
+  ...twoRouter,
   threeRouter,
   fourRouter,
   {
@@ -37,7 +37,7 @@ const routes = [
   }
 ]
 
-const routes = [oneRouter, ...twoRouter, threeRouter, fourRouter];
+// const routes = [oneRouter, ...twoRouter, threeRouter, fourRouter];
 
 
 const router = new VueRouter({
