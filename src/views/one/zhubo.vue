@@ -1,0 +1,107 @@
+<template>
+  <div class="content">
+        <!-- banner -->
+        <div class="banner">
+          <img src="" alt="" />
+        </div>
+        <!-- 电台分类 -->
+        <div class="sort">
+          <div class="sort-con">
+            <i class="iconfont icon-yinle"></i>
+            <p>电台分类</p>
+          </div>
+          <div class="sort-con">
+            <i class="iconfont icon-paihangbang"></i>
+            <p>电台排行</p>
+          </div>
+        </div>
+
+        <!-- 每天听些好节目 -->
+        <div class="tiu-jian-mv">
+          <div class="tj-t">
+            每天听些好节目>
+          </div>
+          <div class="tj-b">
+            <ul>
+              <li>
+                <div class="tj-img">
+                  <img src="" alt="" />
+                </div>
+                <div class="tj-txt">
+                  <h3>【3D环绕合集】你也要来玩吗？很...</h3>
+                  <p>年度最受欢迎个性推进按歌曲</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 脱口秀 -->
+        <div class="tiu-jian">
+          <div class="tj-t">
+           脱口秀>
+          </div>
+          <div class="tj-b">
+            <ul>
+              <li>
+                <div class="tj-img">
+                  <img src="" alt="" />
+                </div>
+                <p>年度最受欢迎个性推进按歌曲</p>
+              </li>
+              <li>
+                <div class="tj-img">
+                  <img src="" alt="" />
+                </div>
+                <p>年度最受欢迎个性推进按歌曲</p>
+              </li>
+              <li>
+                <div class="tj-img">
+                  <img src="" alt="" />
+                </div>
+                <p>年度最受欢迎个性推进按歌曲</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style scoped>
+/* content */
+.content{flex:1;overflow-y: auto;}
+.content::-webkit-scrollbar {
+  display: none;
+}
+.content .banner{width: 100%;height:10.51rem;}
+.content .banner img{width: 100%;height:100%;background: brown;}
+
+/* 电台分类 */
+.content .sort{width:100%;height:2.43rem;margin-top: 1.05rem;margin-bottom:1.7rem; display: flex;justify-content: space-around;}
+.content .sort .sort-con{display: flex;line-height:2.43rem;}
+.content .sort .sort-con i{font-size: 1.6rem;}
+.content .sort .sort-con p{font-size: 1.05rem;padding: 0 0.8rem;}
+
+/* 每天听些好节目 */
+.tiu-jian-mv .tj-t{width: 100%;height: 3.23rem;line-height:3.23rem;color:rgba(80, 80, 80, 1);font-size: 1.13rem;font-weight:600;}
+.tiu-jian-mv .tj-b ul{width: 100%;}
+.tiu-jian-mv .tj-b ul li{width:100%;height:5.66rem;margin-bottom:0.98rem;display: flex;}
+.tiu-jian-mv .tj-b ul li .tj-img{width:5.66rem;height: 5.66rem;background-color: gray;margin-right:0.81rem;}
+.tiu-jian-mv .tj-b ul li .tj-img img{background:rgba(118, 118, 118, 1);}
+.tiu-jian-mv .tj-b ul li .tj-txt h3{line-height: 2.91rem;color: rgba(80, 80, 80, 1);font-size: 1.05rem;width:19rem;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.tiu-jian-mv .tj-b ul li .tj-txt p{line-height: 2.34rem;color:rgba(128, 128, 128, 1);font-size: 0.89rem;width:19rem;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+
+/* 脱口秀 */
+.tiu-jian .tj-t{width: 100%;height: 3.23rem;line-height:3.23rem;color:rgba(80, 80, 80, 1);font-size: 1.13rem;font-weight: 600;}
+.tiu-jian .tj-b ul{width: 100%;display: flex;justify-content: space-between;}
+.tiu-jian .tj-b ul li{width:8.49rem;height:11.76rem;margin-bottom:0.98rem;}
+.tiu-jian .tj-b ul li .tj-img{width:8.49rem;height: 8.49rem;background-color: gray;margin-bottom:0.4rem;}
+.tiu-jian .tj-b ul li .tj-img img{background:rgba(118, 118, 118, 1);width: 100%;height: 100%;}
+.tiu-jian .tj-b ul li .tj-txt p{line-height: 2.34rem;color:rgba(128, 128, 128, 1);font-size: 0.89rem;width:19rem;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+
+</style>
