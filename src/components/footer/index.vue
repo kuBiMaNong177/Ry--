@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <footer class="bot">
     <router-link class="aa" to="/">
       <span class="iconfont icon-gedan"></span>
@@ -17,6 +18,26 @@
       <em>账号</em>
     </router-link>
   </footer>
+=======
+   <footer class="bot">
+      <router-link class="aa" :to='{name:"one"}'>
+        <span class="iconfont icon-gedan"></span>
+        <em>发现音乐</em>
+      </router-link>
+      <router-link :to='{name:"two"}'>
+        <span class="iconfont icon-yinyue"></span>
+        <em>我的音乐</em>
+      </router-link>
+      <router-link :to='{name:"three"}'>
+        <span class="iconfont icon-wode"></span>
+        <em>朋友</em>
+      </router-link>
+      <router-link :to='{name:"four"}'>
+        <span class="iconfont icon-wode"></span>
+        <em>账号</em>
+      </router-link>
+    </footer>
+>>>>>>> 2c01892e1b41c7e97fb57cafc4f2568b117cabc1
 </template>
 
 <script>
