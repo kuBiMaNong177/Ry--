@@ -1,11 +1,12 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-import oneRouter from '@/router/one'
-import twoRouter from '@/router/two'
-import threeRouter from '@/router/three'
-import fourRouter from '@/router/four'
+import oneRouter from "@/router/one";
+import twoRouter from "@/router/two";
+import threeRouter from "@/router/three";
+import fourRouter from "@/router/four";
 
+Vue.use(VueRouter);
 
 Vue.use(VueRouter)
 
@@ -36,8 +37,11 @@ const routes = [
   }
 ]
 
+const routes = [oneRouter, ...twoRouter, threeRouter, fourRouter];
+
+
 const router = new VueRouter({
   routes
-})
+});
 
-export default router
+export default router;

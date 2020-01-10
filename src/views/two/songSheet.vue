@@ -2,9 +2,7 @@
   <div class="main">
     <Header></Header>
     <div class="content">
-      <keep-alive>
-        <router-view></router-view>
-      </keep-alive>
+      <h1>two 子页面</h1>
     </div>
     <Footer></Footer>
   </div>
@@ -12,10 +10,10 @@
 
 <script>
 import Footer from "@/components/footer/index.vue";
-import Header from "@/views/one/header.vue";
-
+import Header from "@/components/header/index.vue";
 export default {
-  name: "One",
+  name: "Three",
+
   components: {
     Footer,
     Header
