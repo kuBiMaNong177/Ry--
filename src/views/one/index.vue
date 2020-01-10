@@ -11,21 +11,17 @@
 </template>
 
 <script>
-
-
-import Footer from '@/components/footer/index.vue'
-import Header from '@/views/one/header.vue'
+import Footer from "@/components/footer/index.vue";
+import Header from "@/views/one/header.vue";
 
 export default {
-  name:'One',
-  components:{
+  name: "One",
+  components: {
     Footer,
     Header
   }
-}
+};
 </script>
 
 <style scoped>
-
-
 </style>

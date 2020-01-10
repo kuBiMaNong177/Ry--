@@ -20,16 +20,16 @@
 </template>
 
 <script>
-	import Footer from '@/components/footer/index.vue'
-	// import Header from '@/components/header/index.vue'
-	export default {
-		name: 'Three',
+import Footer from "@/components/footer/index.vue";
+import Header from "@/components/header/index.vue";
+export default {
+  name: "Three",
 
-		components: {
-			Footer
-			// Header
-		}
-	}
+  components: {
+    Footer,
+    Header
+  }
+};
 </script>
 
 <style scoped>
