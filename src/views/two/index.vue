@@ -10,7 +10,7 @@
           <p>我的音乐</p>
         </li>
         <li>
-          <img src="../../img/two 图标一.jpg" />
+          <img src="../../img/two 图标1.jpg" />
         </li>
       </ul>
     </Header>
@@ -21,7 +21,7 @@
         <ul class="sonNav">
           <li>
             <div>
-              <img src="../../img/two 图标二.png" />
+              <img src="../../img/two 图标2.png" />
               <span>本地音乐</span>
             </div>
 
@@ -31,7 +31,7 @@
           </li>
           <li>
             <div>
-              <img src="../../img/two 图标三.png" />
+              <img src="../../img/two 图标3.png" />
               <span>最近播放</span>
             </div>
 
@@ -41,7 +41,7 @@
           </li>
           <li>
             <div>
-              <img src="../../img/two 图标四.png" />
+              <img src="../../img/two 图标4.png" />
               <span>我的电台</span>
             </div>
 
@@ -51,7 +51,7 @@
           </li>
           <li>
             <div>
-              <img src="../../img/two 图标五.png" />
+              <img src="../../img/two 图标5.png" />
               <span>我的收藏</span>
             </div>
 
@@ -69,10 +69,10 @@
         <div class="songsheet">
           <dl>
             <dt>
-              <img src="../../img/two 图片六.png" />
+              <img src="../../img/two 图标6.png" />
             </dt>
             <dd>
-              <p id="xhyy">我喜欢得音乐1111</p>
+              <p id="xhyy">我喜欢得音乐</p>
             </dd>
             <dd>
               <p id="yxz">7首，已下载4首</p>
@@ -86,7 +86,7 @@
       <div class="songsheet">
         <dl>
           <dt>
-            <img src="../../img/two 图片六.png" />
+            <img src="../../img/two 图标6.png" />
           </dt>
           <dd>
             <p id="xhyy">我喜欢得音乐</p>
@@ -99,7 +99,7 @@
       <div class="songsheet">
         <dl>
           <dt>
-            <img src="../../img/two 图片六.png" />
+            <img src="../../img/two 图标6.png" />
           </dt>
           <dd>
             <p id="xhyy">我喜欢得音乐</p>
@@ -112,7 +112,7 @@
       <div class="songsheet">
         <dl>
           <dt>
-            <img src="../../img/two 图片六.png" />
+            <img src="../../img/two 图标6.png" />
           </dt>
           <dd>
             <p id="xhyy">我喜欢得音乐</p>
@@ -125,7 +125,7 @@
       <div class="songsheet">
         <dl>
           <dt>
-            <img src="../../img/two 图片六.png" />
+            <img src="../../img/two 图标6.png" />
           </dt>
           <dd>
             <p id="xhyy">我喜欢得音乐</p>
@@ -138,7 +138,7 @@
       <div class="songsheet">
         <dl>
           <dt>
-            <img src="../../img/two 图片六.png" />
+            <img src="../../img/two 图标6.png" />
           </dt>
           <dd>
             <p id="xhyy">我喜欢得音乐</p>
@@ -151,7 +151,7 @@
       <div class="songsheet">
         <dl>
           <dt>
-            <img src="../../img/two 图片六.png" />
+            <img src="../../img/two 图标6.png" />
           </dt>
           <dd>
             <p id="xhyy">我喜欢得音乐</p>
@@ -164,7 +164,7 @@
       <div class="songsheet">
         <dl>
           <dt>
-            <img src="../../img/two 图片六.png" />
+            <img src="../../img/two 图标6.png" />
           </dt>
           <dd>
             <p id="xhyy">我喜欢得音乐</p>
@@ -177,7 +177,7 @@
       <div class="songsheet">
         <dl>
           <dt>
-            <img src="../../img/two 图片六.png" />
+            <img src="../../img/two 图标6.png" />
           </dt>
           <dd>
             <p id="xhyy">我喜欢得音乐</p>
@@ -190,7 +190,7 @@
       <div class="songsheet">
         <dl>
           <dt>
-            <img src="../../img/two 图片六.png" />
+            <img src="../../img/two 图标6.png" />
           </dt>
           <dd>
             <p id="xhyy">我喜欢得音乐</p>
@@ -208,6 +208,7 @@
 
 <script>
 import Footer from "@/components/footer/index.vue";
+// import axios from 'axiox'
 // import Header from "@/components/header/index.vue";
 
 export default {
