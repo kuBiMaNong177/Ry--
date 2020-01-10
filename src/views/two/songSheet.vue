@@ -2,7 +2,7 @@
   <div class="main">
     <Header></Header>
     <div class="content">
-      <h1>one 页面</h1>
+      <h1>two 子页面</h1>
     </div>
     <Footer></Footer>
   </div>
@@ -11,9 +11,9 @@
 <script>
 import Footer from "@/components/footer/index.vue";
 import Header from "@/components/header/index.vue";
-
 export default {
-  name: "One",
+  name: "Three",
+
   components: {
     Footer,
     Header

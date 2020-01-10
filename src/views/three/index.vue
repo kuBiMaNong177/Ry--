@@ -9,19 +9,17 @@
 </template>
 
 <script>
-
-import Footer from '@/components/footer/index.vue'
-import Header from '@/components/header/index.vue'
+import Footer from "@/components/footer/index.vue";
+import Header from "@/components/header/index.vue";
 export default {
-  name:'Three',
+  name: "Three",
 
-  components:{
+  components: {
     Footer,
     Header
   }
-}
+};
 </script>
 
 <style scoped>
-
 </style>
