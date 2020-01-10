@@ -97,29 +97,32 @@ export default {
 }
 
 .li_big {
-  width: 100%;
+  width:100%;
   height: 6rem;
+  position: relative;
+  overflow: hidden;
 }
 .li_big img {
   width:70px;
   height:70px;
   float:left;
-  margin-left:5%;
-  margin-top:1.3%;
-  border-radius:50%
+  border-radius:50%;
+  margin-top:14px;
+  margin-left:16px
 }
 .li_span{
     font-size:18px;
-    margin-left:200px;
-    margin-top:10%
+    position:absolute;
+    left:110px;top:26px
 }
 .li_span1{
     margin-left:200px;
     color:#ccc;
-    font-size:16px;
-    margin-top:-10px
-
+    position:absolute;
+    left:-90px;
+    top:50px
 }
+
 </style>
 
 
