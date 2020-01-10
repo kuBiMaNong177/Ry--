@@ -1,9 +1,4 @@
 <template>
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> 04903746a16ed1d2b530f8076e83de7cb109467d
    <footer class="bot">
       <router-link class="aa" :to='{name:"one"}'>
         <span class="iconfont icon-gedan"></span>
@@ -36,10 +31,6 @@ export default {
   height: 3rem;
   width: 100%;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 04903746a16ed1d2b530f8076e83de7cb109467d
 .main .bot {
   border-top: 1px #ccc solid;
   display: flex;
@@ -50,10 +41,6 @@ export default {
   position: fixed;
   bottom: 0px;
   background-color: rgba(255, 255, 255, 1);
-<<<<<<< HEAD
-=======
-
->>>>>>> 04903746a16ed1d2b530f8076e83de7cb109467d
 }
 .main .bot a {
   display: flex;
