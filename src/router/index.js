@@ -12,9 +12,9 @@ Vue.use(VueRouter)
 
 const routes = [
   oneRouter,
-  twoRouter,
   threeRouter,
   fourRouter,
+  ...twoRouter,
   {
     //登陆路由
     path: '/denglu',
@@ -25,19 +25,18 @@ const routes = [
     path: '/phone',
     name: 'phone',
     component: () => import('@/views/four/twoluyou/phonelogin.vue'),
-  }, 
+  },
   {  //手机号注册路由
     path: '/enroll',
     name: 'enroll',
     component: () => import('@/views/four/twoluyou/enroll.vue'),
-  },{
-    path:'/verify',
-    name:'verify',
-    component: () => import('@/views/four/twoluyou/verify'),
+  },
+  {  //关注
+    path: '/attention',
+    name: 'attention',
+    component: () => import('@/views/four/module/attention.vue'),
   }
 ]
-
-const routes = [oneRouter, ...twoRouter, threeRouter, fourRouter];
 
 
 const router = new VueRouter({

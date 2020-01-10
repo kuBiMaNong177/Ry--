@@ -5,13 +5,15 @@
         <div class="header">
           <span></span>
           <span>账号</span>
-          <img src="../../images/2.svg" />
+          <img src="../../img/two 图标一.jpg" />
         </div>
       </div>
       <div class="wrapper_276">
-        <div class="box_border">头像</div>
+        <div class="box_border">
+          <img src="https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1640434779,3971610929&fm=26&gp=0.jpg" alt="">
+        </div>
         <div class="all">
-          <div class="text">名字</div>
+          <div class="text">李云龙</div>
           <div class="grade">等级</div>
         </div>
         <button class="btn">签到</button>
@@ -95,7 +97,7 @@
         <span>关于宇天音乐</span>
         <em>〉</em>
       </div>
-      <router-link to="/denglu">
+      <router-link :to="{name:'denglu'}">
         <button @click="delebtn" class="btn_footer">退出登陆</button>
       </router-link>
     </div>
@@ -106,7 +108,7 @@
 </template>
 
 <script>
-import { Dialog } from 'vant'
+import { Dialog } from "vant";
 import fans from "@/views/four/module/index.vue";
 import Footer from "@/components/footer/index.vue";
 export default {
@@ -118,13 +120,24 @@ export default {
   },
   methods: {
     delebtn() {
-      Dialog.confirm({
-      title: '宇天音乐',
-      message: '确认退出当前账号吗?'
-})
-        
+      this.axios.delete('http://localhost:3000/logout')
+      .then(res=>{
+        console.log(res)
+        if(res.data.code==200){
+           Dialog.confirm({
+           title: "宇天音乐",
+           message: "确认退出当前账号吗?"
+      });
+        }
+      })
     }
-  }
+  },
+  mounted() {
+    this.axios.get('http://localhost:3000/login/status')
+    .then(res=>{
+      console.log(res)
+    })
+  },
 };
 </script>
 
@@ -146,7 +159,7 @@ export default {
   height: 3rem;
   display: flex;
   justify-content: space-around;
-  background: #c20c0c;
+ background-color: #d33a31;
   position: fixed;
   z-index: 10;
 }
@@ -181,6 +194,7 @@ export default {
   font-size: 0.97rem;
   margin-top: 2rem;
 }
+.box_border img{width:100%}
 .all {
   width: 4rem;
   height: 4rem;
@@ -188,7 +202,7 @@ export default {
   margin-left: -20%;
 }
 .text {
-  width: 3rem;
+  width: 7rem;
   height: 1.62rem;
   color: rgba(0, 0, 0, 1);
   font-size: 1.05rem;
