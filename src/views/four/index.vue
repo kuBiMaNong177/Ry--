@@ -5,7 +5,7 @@
         <div class="header">
           <span></span>
           <span>账号</span>
-          <img src="../../img/two 图标一.jpg" />
+          <img src="../../img/two 图标1.jpg" />
         </div>
       </div>
       <div class="wrapper_276">
