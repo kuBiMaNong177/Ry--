@@ -9,9 +9,10 @@
     </div>
     <div>
       <ul>
-        <li class="li_big" v-for="(item,index) in list" :key="item.id">
+        <li class="li_big" v-for="(item) in list" :key="item.id">
           <img :src="item.avatarUrl" />
-          <span class="li_span">{{item.nickname}}</span>
+          <p class="li_span">{{item.nickname}}</p>
+          <p class="li_span1">{{item.signature}}</p>
         </li>
       </ul>
     </div>
@@ -96,22 +97,32 @@ export default {
 }
 
 .li_big {
-  background: #cccccc;
-  width: 100%;
+  width:100%;
   height: 6rem;
+  position: relative;
+  overflow: hidden;
 }
 .li_big img {
-  width:21%;
+  width:70px;
+  height:70px;
   float:left;
-  margin-left:5%;
-  margin-top:1.3%;
-  border-radius:50%
+  border-radius:50%;
+  margin-top:14px;
+  margin-left:16px
 }
 .li_span{
     font-size:18px;
-    margin-left:5%;
-    line-height:3
+    position:absolute;
+    left:110px;top:26px
 }
+.li_span1{
+    margin-left:200px;
+    color:#ccc;
+    position:absolute;
+    left:-90px;
+    top:50px
+}
+
 </style>
 
 

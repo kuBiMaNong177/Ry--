@@ -5,23 +5,55 @@
       <p>手机号登陆</p>
     </div>
     <div class="input_1">
-      <img class="img" src="../../../images/phone.png" alt />
-      <input class="ipt1" placeholder="手机号" type="text" />
+      <img class="img" ref="ipp1" src="../../../images/phone.png" alt />
+      <input class="ipt1" ref="ipp1" placeholder="手机号" type="text" />
     </div>
     <div class="input_2">
       <img class="img_1" src="../../../images/password.png" alt />
-      <input class="ipt2" placeholder="设置登陆密码,不少于6位" type="password" />
+      <input
+        @keyup.enter="login"
+        class="ipt2"
+        ref="ipp2"
+        placeholder="设置登陆密码,不少于6位"
+        type="password"
+      />
     </div>
-    <button class="btn">登陆</button>
+    <button class="btn" @click="login">登陆</button>
   </div>
 </template>
 <script>
 export default {
   methods: {
-        btns(){
-            history.go(-1)
-        }
+    btns() {
+      history.go(-1);
     },
+    //登陆api   和登陆判断
+    login() {
+      this.axios
+        .get(
+          "http://localhost:3000/login/cellphone?phone=" +this.$refs.ipp1.value +"&password=" +this.$refs.ipp2.value
+        )
+        .then(res => {
+          console.log(res);
+
+          if (res.data.code == 200) {
+            alert("登陆成功");
+            this.$cookies.set("token", res.data.token);
+            this.$cookies.set("id", res.data.account.id);
+            this.$cookies.set("userId", res.data.profile.userId);
+            location.href = "index.vue";
+          } else {
+            alert(res.data.msg);
+          }
+        });
+    },
+  },
+  //  mounted() {
+  //     this.axios.get('http://localhost:3000/login/status')
+  //   .then(res=>{
+  //     console.log(res)
+  //   })
+  //   },
 };
 </script>
 <style scoped>
@@ -90,12 +122,12 @@ export default {
   width: 80%;
   height: 3rem;
   background-color: rgba(0, 0, 0, 1);
-  color:white;
-  margin-top:90px;
-  margin-left:10%;
-  border:none
+  color: white;
+  margin-top: 90px;
+  margin-left: 10%;
+  border: none;
 }
-.over{
-    overflow-y:hidden;
+.over {
+  overflow-y: hidden;
 }
 </style>
