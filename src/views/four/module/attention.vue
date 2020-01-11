@@ -9,7 +9,7 @@
     </div>
     <div>
       <ul>
-        <li class="li_big" v-for="(item,index) in list" :key="item.id">
+        <li class="li_big" v-for="(item) in list" :key="item.id">
           <img :src="item.avatarUrl" />
           <p class="li_span">{{item.nickname}}</p>
           <p class="li_span1">{{item.signature}}</p>

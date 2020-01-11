@@ -12,10 +12,7 @@ Vue.use(VueRouter);
 
 const routes = [
   oneRouter,
-<<<<<<< HEAD
   ...twoRouter,
-=======
->>>>>>> 60e3f274d99352a91811be2e553957f6adb42e88
   threeRouter,
   fourRouter,
   ...twoRouter,
@@ -37,24 +34,10 @@ const routes = [
     name: "enroll",
     component: () => import("@/views/four/twoluyou/enroll.vue")
   },
-<<<<<<< HEAD
-  {
-    path: "/verify",
-    name: "verify",
-    component: () => import("@/views/four/twoluyou/verify")
-  }
-];
-=======
-  {  //手机号登陆路由
-    path: '/phone',
-    name: 'phone',
-    component: () => import('@/views/four/twoluyou/phonelogin.vue'),
-  },
-  {  //手机号注册路由
-    path: '/enroll',
-    name: 'enroll',
-    component: () => import('@/views/four/twoluyou/enroll.vue'),
-  },
+
+
+
+
   {  //关注
     path: '/attention',
     name: 'attention',
@@ -62,7 +45,6 @@ const routes = [
   }
 ]
 
->>>>>>> 60e3f274d99352a91811be2e553957f6adb42e88
 
 const router = new VueRouter({
   routes
