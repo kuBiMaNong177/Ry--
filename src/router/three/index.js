@@ -13,6 +13,11 @@ export default{
 		    path: "/near",
 		    name: "NEAR",
 		    component: () => import("@/views/three/near.vue")
+		  },
+		  {
+		    path: "/tjgz",
+		    name: "TJGZ",
+		    component: () => import("@/views/three/tjgz.vue")
 		  }
       ],
 	redirect: '/dynamic'
