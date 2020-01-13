@@ -44,6 +44,9 @@ export default {
             this.$cookies.set('token', res.data.token)
             this.$cookies.set('id', res.data.account.id)
             this.$cookies.set('userId', res.data.profile.userId)
+            this.$cookies.set('avatarUrl', res.data.profile.avatarUrl)
+            this.$cookies.set('nickname', res.data.profile.nickname)
+            this.$cookies.set('backgroundUrl', res.data.profile.backgroundUrl)
             location.href = 'index.vue'
           } else {
             alert(res.data.msg)
