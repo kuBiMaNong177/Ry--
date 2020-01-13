@@ -13,6 +13,10 @@ Vue.use(VueCookies)
 Vue.prototype.axios=axios
 Vue.config.productionTip = false
 
+window.addEventListener('popstate', function (e) {
+  router.isBack = true
+},false)
+
 new Vue({
   router,
   store,

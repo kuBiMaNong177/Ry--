@@ -11,7 +11,7 @@ Vue.use(VueRouter);
 Vue.use(VueRouter);
 
 const routes = [
-  oneRouter,
+  ...oneRouter,
   ...twoRouter,
   threeRouter,
   fourRouter,
@@ -42,7 +42,13 @@ const routes = [
     path: '/attention',
     name: 'attention',
     component: () => import('@/views/four/module/attention.vue'),
+  },
+
+  {
+    path:"/*",
+    redirect:"/index"
   }
+
 ]
 
 
