@@ -1,47 +1,40 @@
-<<<<<<< HEAD
-import Vue from "vue";
-import Vant from "vant";
-import "vant/lib/index.css";
-import axios from "axios";
-import ElementUI from "element-ui";
-import "element-ui/lib/theme-chalk/index.css";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
-import "../public/css/reset.css";
-=======
+
 import Vue from 'vue'
 import Vant from 'vant';
 import 'vant/lib/index.css';
 import axios from 'axios'
 import VueCookies from 'vue-cookies'
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue'
 import router from './router'
 import store from './store'
 import '../public/css/reset.css'
-<<<<<<< HEAD
-import Vant from 'vant';
-import 'vant/lib/index.css';
 
 Vue.use(Vant);
-=======
->>>>>>> 60e3f274d99352a91811be2e553957f6adb42e88
->>>>>>> 04903746a16ed1d2b530f8076e83de7cb109467d
 
-
-<<<<<<< HEAD
-Vue.config.productionTip = false;
-=======
 Vue.use(VueCookies)
 
 Vue.use(Vant)
 
-Vue.use(ElementUI);
+
 Vue.prototype.axios=axios
 Vue.config.productionTip = false
->>>>>>> 60e3f274d99352a91811be2e553957f6adb42e88
+
+
+//时间戳过滤  显示年  月  日  时 分 秒
+Vue.filter('dateFormat', function(originVal) {
+  const dt = new Date(originVal)
+
+  // const y = dt.getFullYear()  //年
+  const m = (dt.getMonth() + 1 + '').padStart(2,)  //月
+  const d = (dt.getDate() + '').padStart(2, '0')   //日
+
+  const hh = (dt.getHours() + '').padStart(2, '0')  //时
+  const mm = (dt.getMinutes() + '').padStart(2, '0') //分
+  // const ss = (dt.getSeconds() + '').padStart(2, '0') //秒
+
+  // return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
+  return `${m}月${d}日 ${hh}:${mm}`
+})
 
 new Vue({
   router,

@@ -12,10 +12,6 @@ Vue.use(VueRouter);
 
 const routes = [
   oneRouter,
-<<<<<<< HEAD
-  ...twoRouter,
-=======
->>>>>>> 60e3f274d99352a91811be2e553957f6adb42e88
   threeRouter,
   fourRouter,
   ...twoRouter,
@@ -26,7 +22,7 @@ const routes = [
     component: () => import("../views/four/twoluyou/denglu.vue")
   },
   {
-    //手机号登陆路由
+    //登陆页面
     path: "/phone",
     name: "phone",
     component: () => import("@/views/four/twoluyou/phonelogin.vue")
@@ -37,14 +33,6 @@ const routes = [
     name: "enroll",
     component: () => import("@/views/four/twoluyou/enroll.vue")
   },
-<<<<<<< HEAD
-  {
-    path: "/verify",
-    name: "verify",
-    component: () => import("@/views/four/twoluyou/verify")
-  }
-];
-=======
   {  //手机号登陆路由
     path: '/phone',
     name: 'phone',
@@ -59,10 +47,23 @@ const routes = [
     path: '/attention',
     name: 'attention',
     component: () => import('@/views/four/module/attention.vue'),
+  },
+  {  //粉丝
+    path: '/fons',
+    name: 'fons',
+    component: () => import('@/views/four/module/fons.vue'),
+  },
+  {  //动态
+    path: '/dynamic',
+    name: 'dynamic',
+    component: () => import('@/views/four/module/dynamic.vue'),
+  },{  //动态
+    path: '/PL',
+    name: 'PL',
+    component: () => import('@/views/four/module/PL.vue'),
   }
 ]
 
->>>>>>> 60e3f274d99352a91811be2e553957f6adb42e88
 
 const router = new VueRouter({
   routes
