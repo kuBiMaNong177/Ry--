@@ -6,11 +6,13 @@
         <br />
         <span>0</span>
       </li>
-      <li class="ccc_2">
+      <router-link :to="{name:'attention'}">
+        <li class="ccc_2">
         关注
         <br />
         <span>0</span>
       </li>
+      </router-link>
       <li class="ccc_3">
         粉丝
         <br />

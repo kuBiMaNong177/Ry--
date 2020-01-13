@@ -1,7 +1,8 @@
 <template>
   <div class="over">
-    <header class="header_one">登陆</header>
+    
     <div class="back">
+      <header class="header_one">登陆</header>
       <img class="logo" src="../../../images/logo.png" alt />
     </div>
     <div>
@@ -43,23 +44,24 @@ export default {};
 
 <style ceoped>
 .header_one {
-  text-align: center;
+  text-align:center;
   font-size: 20px;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
-  font-weight: 900;
+  /* font-weight: 900; */
 }
 .back {
   background: url("../../../images/background.jpg");
   width: 100%;
-  height: 300px;
+  height: 400px;
   display: flex;
   justify-content: center;
 }
 .logo {
   width: 150px;
   height: 150px;
-  margin-top: 30px;
+  margin-top: 50px;
+  position:absolute
 }
 .btn1 {
   width: 80%;
@@ -117,10 +119,10 @@ export default {};
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-top: 9rem;
+  margin-top: 7.5rem;
 }
 .over{
-    height:100%;
+    height:667px;
     overflow-y:hidden;
 }
 </style>
