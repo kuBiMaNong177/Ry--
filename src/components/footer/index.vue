@@ -1,33 +1,46 @@
 <template>
-   <footer class="bot">
-      <router-link class="aa" :to='{name:"one"}'>
-        <span class="iconfont icon-gedan"></span>
-        <em>发现音乐</em>
-      </router-link>
-      <router-link :to='{name:"two"}'>
-        <span class="iconfont icon-yinyue"></span>
-        <em>我的音乐</em>
-      </router-link>
-      <router-link :to='{name:"three"}'>
-        <span class="iconfont icon-wode"></span>
-        <em>朋友</em>
-      </router-link>
-      <router-link :to='{name:"four"}'>
-        <span class="iconfont icon-wode"></span>
-        <em>账号</em>
-      </router-link>
-    </footer>
+  <footer class="bot">
+    <router-link class="aa" :to="{ name: 'one' }">
+      <span class="iconfont icon-gedan"></span>
+      <em>发现音乐</em>
+    </router-link>
+    <router-link :to="{ name: 'two' }">
+      <span class="iconfont icon-yinyue"></span>
+      <em>我的音乐</em>
+    </router-link>
+    <router-link :to="{ name: 'three' }">
+      <span class="iconfont icon-wode"></span>
+      <em>朋友</em>
+    </router-link>
+    <router-link :to="{ name: 'four' }">
+      <span class="iconfont icon-wode"></span>
+      <em>账号</em>
+    </router-link>
+  </footer>
 </template>
 
 <script>
 export default {
-  name: "Footer"
-};
+  name: 'Footer',
+
+  methods: {
+    // songSheet: function() {
+    //   console.log(111)
+    //   this.axios
+    //     .get(
+    //       'http://localhost:3000/user/playlist?uid=' + this.$cookies.get('id')
+    //     )
+    //     .then(res => {
+    //       console.log(res)
+    //     })
+    // }
+  }
+}
 </script>
 
 <style scoped>
 /* footer */
-.footer_bot{
+.footer_bot {
   height: 3rem;
   width: 100%;
 }

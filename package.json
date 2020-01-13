@@ -9,10 +9,6 @@
   "dependencies": {
     "axios": "^0.19.1",
     "core-js": "^3.4.4",
-<<<<<<< HEAD
-=======
-    "element-ui": "^2.13.0",
->>>>>>> 04903746a16ed1d2b530f8076e83de7cb109467d
     "vant": "^2.4.1",
     "vue": "^2.6.10",
     "vue-cookies": "^1.6.1",

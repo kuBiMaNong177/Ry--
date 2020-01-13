@@ -97,32 +97,32 @@ export default {
 }
 
 .li_big {
-  width:100%;
+  width: 100%;
   height: 6rem;
   position: relative;
   overflow: hidden;
 }
 .li_big img {
-  width:70px;
-  height:70px;
-  float:left;
-  border-radius:50%;
-  margin-top:14px;
-  margin-left:16px
+  width: 70px;
+  height: 70px;
+  float: left;
+  border-radius: 50%;
+  margin-top: 14px;
+  margin-left: 16px;
 }
-.li_span{
-    font-size:18px;
-    position:absolute;
-    left:110px;top:26px
+.li_span {
+  font-size: 18px;
+  position: absolute;
+  left: 110px;
+  top: 26px;
 }
-.li_span1{
-    margin-left:200px;
-    color:#ccc;
-    position:absolute;
-    left:-90px;
-    top:50px
+.li_span1 {
+  margin-left: 200px;
+  color: #ccc;
+  position: absolute;
+  left: -90px;
+  top: 50px;
 }
-
 </style>
 
 
