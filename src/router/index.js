@@ -57,7 +57,7 @@ const routes = [
     path: '/dynamic',
     name: 'dynamic',
     component: () => import('@/views/four/module/dynamic.vue'),
-  },{  //动态
+  },{  //评论
     path: '/PL',
     name: 'PL',
     component: () => import('@/views/four/module/PL.vue'),

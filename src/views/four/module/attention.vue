@@ -12,6 +12,7 @@
       <ul class="ul_big">
         <p v-if="list.length?'':'你还没有添加关注'" class="pp">你还没有添加关注</p>
         <li class="li_big" v-for="(item,index) in list" :key="item.id">
+
           <img :src="item.avatarUrl" />
           <p class="li_span" ref="ppp">{{item.nickname}}</p>
           <p class="li_span1">{{item.signature}}</p>
