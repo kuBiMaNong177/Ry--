@@ -22,7 +22,7 @@ const routes = [
     component: () => import("../views/four/twoluyou/denglu.vue")
   },
   {
-    //手机号登陆路由
+    //登陆页面
     path: "/phone",
     name: "phone",
     component: () => import("@/views/four/twoluyou/phonelogin.vue")
@@ -47,6 +47,20 @@ const routes = [
     path: '/attention',
     name: 'attention',
     component: () => import('@/views/four/module/attention.vue'),
+  },
+  {  //粉丝
+    path: '/fons',
+    name: 'fons',
+    component: () => import('@/views/four/module/fons.vue'),
+  },
+  {  //动态
+    path: '/dynamic',
+    name: 'dynamic',
+    component: () => import('@/views/four/module/dynamic.vue'),
+  },{  //动态
+    path: '/PL',
+    name: 'PL',
+    component: () => import('@/views/four/module/PL.vue'),
   }
 ]
 

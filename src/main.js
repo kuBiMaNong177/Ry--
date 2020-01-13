@@ -9,11 +9,10 @@ import router from './router'
 import store from './store'
 import '../public/css/reset.css'
 
+Vue.use(Vant);
 
 
 Vue.use(VueCookies)
-
-Vue.use(Vant)
 
 Vue.prototype.axios=axios
 Vue.config.productionTip = false

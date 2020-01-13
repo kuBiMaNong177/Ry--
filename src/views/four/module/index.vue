@@ -1,23 +1,27 @@
 <template>
   <div>
     <ul class="ccc">
-      <li class="ccc_1">
+      <router-link :to="{name:'dynamic'}">
+        <li class="ccc_1">
         动态
         <br />
-        <span>0</span>
+        <span>{{$store.state.count_dynamic}}</span>
       </li>
+      </router-link>
       <router-link :to="{name:'attention'}">
         <li class="ccc_2">
         关注
         <br />
-        <span>0</span>
+        <span>{{$store.state.counts}}</span>
       </li>
       </router-link>
-      <li class="ccc_3">
+     <router-link :to="{name:'fons'}">
+        <li class="ccc_3">
         粉丝
         <br />
-        <span>0</span>
+        <span>{{$store.state.count}}</span>
       </li>
+     </router-link>
       <li class="ccc_4">我的资料</li>
     </ul>
     <slot></slot>
@@ -25,7 +29,20 @@
 </template>
 
 <script>
-export default {};
+
+export default {
+  methods: {
+    load(){
+      this.$store.commit("add",{})
+    },
+  },
+    created() {
+    this.load();
+  },
+
+};
+
+  
 </script>
 
 <style scoped>
