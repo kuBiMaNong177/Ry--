@@ -21,13 +21,26 @@
 
 <script>
 export default {
-  name: "Footer"
-};
+  name: 'Footer',
+
+  methods: {
+    // songSheet: function() {
+    //   console.log(111)
+    //   this.axios
+    //     .get(
+    //       'http://localhost:3000/user/playlist?uid=' + this.$cookies.get('id')
+    //     )
+    //     .then(res => {
+    //       console.log(res)
+    //     })
+    // }
+  }
+}
 </script>
 
 <style scoped>
 /* footer */
-.footer_bot{
+.footer_bot {
   height: 3rem;
   width: 100%;
 }

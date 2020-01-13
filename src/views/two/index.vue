@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <dl class="main">
     <!-- 头部 -->
     <Header class="top">
       <ul class="topContent">
@@ -16,7 +16,7 @@
     </Header>
 
     <!-- 内容 -->
-    <div class="content">
+    <dl class="content">
       <div class="nav">
         <ul class="sonNav">
           <li>
@@ -61,163 +61,64 @@
           </li>
         </ul>
       </div>
-
       <div class="Establish">
-        <p>我创建得歌单（1）</p>
+        <p>我创建得歌单（{{list.length}}）</p>
       </div>
-      <router-link to="songSheet">
-        <div class="songsheet">
+      <router-link
+        v-for="(item, id) in list"
+        :key="id"
+        :to="{ name: 'songSheet', query: { id: item.id } }"
+      >
+        <dl class="songsheet">
           <dl>
             <dt>
-              <img src="../../img/two 图标6.png" />
+              <img :src="item.coverImgUrl" />
             </dt>
             <dd>
-              <p id="xhyy">我喜欢得音乐</p>
+              <p id="xhyy">{{ item.name }}</p>
             </dd>
             <dd>
-              <p id="yxz">7首，已下载4首</p>
+              <p id="yxz">{{ item.trackCount }}首，播放{{ item.playCount }}次</p>
             </dd>
           </dl>
-        </div>
+        </dl>
       </router-link>
-      <div class="Establish">
-        <p>我收藏得歌单（10）</p>
-      </div>
-      <div class="songsheet">
-        <dl>
-          <dt>
-            <img src="../../img/two 图标6.png" />
-          </dt>
-          <dd>
-            <p id="xhyy">我喜欢得音乐</p>
-          </dd>
-          <dd>
-            <p id="yxz">7首，已下载4首</p>
-          </dd>
-        </dl>
-      </div>
-      <div class="songsheet">
-        <dl>
-          <dt>
-            <img src="../../img/two 图标6.png" />
-          </dt>
-          <dd>
-            <p id="xhyy">我喜欢得音乐</p>
-          </dd>
-          <dd>
-            <p id="yxz">7首，已下载4首</p>
-          </dd>
-        </dl>
-      </div>
-      <div class="songsheet">
-        <dl>
-          <dt>
-            <img src="../../img/two 图标6.png" />
-          </dt>
-          <dd>
-            <p id="xhyy">我喜欢得音乐</p>
-          </dd>
-          <dd>
-            <p id="yxz">7首，已下载4首</p>
-          </dd>
-        </dl>
-      </div>
-      <div class="songsheet">
-        <dl>
-          <dt>
-            <img src="../../img/two 图标6.png" />
-          </dt>
-          <dd>
-            <p id="xhyy">我喜欢得音乐</p>
-          </dd>
-          <dd>
-            <p id="yxz">7首，已下载4首</p>
-          </dd>
-        </dl>
-      </div>
-      <div class="songsheet">
-        <dl>
-          <dt>
-            <img src="../../img/two 图标6.png" />
-          </dt>
-          <dd>
-            <p id="xhyy">我喜欢得音乐</p>
-          </dd>
-          <dd>
-            <p id="yxz">7首，已下载4首</p>
-          </dd>
-        </dl>
-      </div>
-      <div class="songsheet">
-        <dl>
-          <dt>
-            <img src="../../img/two 图标6.png" />
-          </dt>
-          <dd>
-            <p id="xhyy">我喜欢得音乐</p>
-          </dd>
-          <dd>
-            <p id="yxz">7首，已下载4首</p>
-          </dd>
-        </dl>
-      </div>
-      <div class="songsheet">
-        <dl>
-          <dt>
-            <img src="../../img/two 图标6.png" />
-          </dt>
-          <dd>
-            <p id="xhyy">我喜欢得音乐</p>
-          </dd>
-          <dd>
-            <p id="yxz">7首，已下载4首</p>
-          </dd>
-        </dl>
-      </div>
-      <div class="songsheet">
-        <dl>
-          <dt>
-            <img src="../../img/two 图标6.png" />
-          </dt>
-          <dd>
-            <p id="xhyy">我喜欢得音乐</p>
-          </dd>
-          <dd>
-            <p id="yxz">7首，已下载4首</p>
-          </dd>
-        </dl>
-      </div>
-      <div class="songsheet">
-        <dl>
-          <dt>
-            <img src="../../img/two 图标6.png" />
-          </dt>
-          <dd>
-            <p id="xhyy">我喜欢得音乐</p>
-          </dd>
-          <dd>
-            <p id="yxz">7首，已下载4首</p>
-          </dd>
-        </dl>
-      </div>
+    </dl>
+    <div class="height">
+      <Footer></Footer>
     </div>
-
-    <Footer></Footer>
-  </div>
+  </dl>
 </template>
-
 <script>
-import Footer from "@/components/footer/index.vue";
-// import axios from 'axiox'
-// import Header from "@/components/header/index.vue";
+import Footer from '@/components/footer/index.vue'
+import Vue from 'vue'
+import bus from '@/assets/busEvent.js'
 
 export default {
-  name: "Two",
+  name: 'Two',
+  data() {
+    return {
+      list: []
+    }
+  },
+  methods: {
+    count: function() {
+      this.axios
+        .get(
+          'http://localhost:3000/user/playlist?uid=' + this.$cookies.get('id')
+        )
+        .then(res => {
+          this.list = res.data.playlist
+        })
+    }
+  },
+  created() {
+    this.count()
+  },
   components: {
     Footer
-    // Header
   }
-};
+}
 </script>
 
 <style scoped>
@@ -342,5 +243,8 @@ export default {
 #yxz {
   font-size: 0.63rem;
   color: rgba(128, 128, 128, 1);
+}
+.height > footer {
+  min-height: 3rem;
 }
 </style>

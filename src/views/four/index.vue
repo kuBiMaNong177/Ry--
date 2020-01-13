@@ -5,16 +5,16 @@
         <div class="header">
           <span></span>
           <span>账号</span>
-          <img src="../../img/two 图标一.jpg" />
+          <img src="../../img/two 图标1.jpg" />
         </div>
       </div>
       <div class="wrapper_276">
         <div class="box_border">
-          <img src="https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1640434779,3971610929&fm=26&gp=0.jpg" alt="">
+          <img :src="img" alt="">
         </div>
         <div class="all">
-          <div class="text">李云龙</div>
-          <div class="grade">等级</div>
+          <div class="text">{{this.$cookies.get("nickname")}}</div>
+          <div class="grade">Lv 3</div>
         </div>
         <button class="btn">签到</button>
         <!-- 动态  关注  粉丝  我的资料组件 -->
@@ -114,6 +114,12 @@ import Footer from "@/components/footer/index.vue";
 export default {
   name: "Four",
 
+  data(){
+    return {
+      img:this.$cookies.get('avatarUrl')
+    }
+  },
+
   components: {
     Footer,
     fans
@@ -132,13 +138,9 @@ export default {
       })
     }
   },
-  mounted() {
-    this.axios.get('http://localhost:3000/login/status')
-    .then(res=>{
-      console.log(res)
-    })
-  },
 };
+
+  
 </script>
 
 <style scoped>
@@ -195,6 +197,7 @@ export default {
   margin-top: 2rem;
 }
 .box_border img{width:100%}
+.box_border img{border-radius:50%}
 .all {
   width: 4rem;
   height: 4rem;
@@ -202,10 +205,11 @@ export default {
   margin-left: -20%;
 }
 .text {
-  width: 7rem;
+  width: 12rem;
   height: 1.62rem;
   color: rgba(0, 0, 0, 1);
   font-size: 1.05rem;
+  margin-top:13px
 }
 .grade {
   width: 3.23rem;
@@ -215,6 +219,8 @@ export default {
   box-shadow: rgba(128, 128, 128, 1) solid 0.08rem;
   border-radius: 0.81rem;
   font-size: 0.89rem;
+  text-align:center;
+  line-height:2
 }
 .btn {
   width: 3.66rem;
