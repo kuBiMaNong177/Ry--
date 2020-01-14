@@ -105,6 +105,7 @@ export default {
   text-align: center;
   font-size: 1rem;
   color: #fffae9;
+  /* transition: all .9s; */
 }
 .header .nav .active {
   color: #fffae9;
