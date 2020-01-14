@@ -7,13 +7,13 @@
         <img src="../../../img/two 图标1.jpg" />
       </div>
     </div>
-    
+
     <div class="middle">
       <img class="middle_img" :src=img alt />
       <p class="middle_p">{{cookies}}</p>
       <p>{{Number(this.add)|dateFormat}}</p>
       <p >{{this.wz}}</p>
-      <img class="dynamic_img" :src="this.paa" alt="">
+      <!-- <img class="dynamic_img" :src="this.paa" alt=""> -->
     </div>
     <div class="footer_fot">
       <input type="text" placeholder="发表评论">
@@ -39,7 +39,7 @@ export default {
       wz:''
     };
   },
-  
+
   methods: {
     btns() {
       history.go(-1);
@@ -48,16 +48,16 @@ export default {
   activated() {
       this.cookies=this.$cookies.get('nickname')
     //  this.$cookies.get('nickname')
-      let that = this;
-        
-      that.threadId=that.$route.query.id
-      that.add=that.time=that.$route.query.time
-      that.paa=that.$route.query.img
-      that.wz=that.$route.query.wz
-    //   console.log(threadId)
+      // let that = this;
 
-      that.axios
-      .get("http://localhost:3000/comment/event?threadId="+that.threadId)
+      this.threadId=this.$route.query.id
+      this.add=this.$route.query.time
+      this.paa=this.$route.query.img
+      this.wz=this.$route.query.wz
+      console.log(this.add)
+
+      this.axios
+      .get("http://localhost:3000/comment/event?threadId="+this.threadId)
       .then(res => {
         // console.log(res.data.events[0].eventTime)
         console.log(res);

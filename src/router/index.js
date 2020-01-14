@@ -60,13 +60,13 @@ const routes = [
     //粉丝
     path: '/fons',
     name: 'fons',
-    component: () => import('@/views/four/module/fons.vue')
+    component: () => import('@/views/four/module/fons.vue'),
   },
   {
     //动态
     path: '/dynamic',
     name: 'dynamic',
-    component: () => import('@/views/four/module/dynamic.vue')
+    component: () => import('@/views/four/module/dynamic.vue'),
   },
   {
     //评论

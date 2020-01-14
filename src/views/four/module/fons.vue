@@ -123,7 +123,7 @@ export default {
   position: absolute;
   left: 110px;
   top: 26px;
-  
+
 }
 .li_span1 {
   margin-left: 200px;
