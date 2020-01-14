@@ -25,36 +25,42 @@
 export default {
   methods: {
     btns() {
-      history.go(-1);
+      history.go(-1)
     },
     //登陆api   和登陆判断
     login() {
       this.axios
         .get(
-          "http://localhost:3000/login/cellphone?phone=" +this.$refs.ipp1.value +"&password=" +this.$refs.ipp2.value
+          'http://localhost:3000/login/cellphone?phone=' +
+            this.$refs.ipp1.value +
+            '&password=' +
+            this.$refs.ipp2.value
         )
         .then(res => {
-          console.log(res);
+          console.log(res)
 
           if (res.data.code == 200) {
-            alert("登陆成功");
-            this.$cookies.set("token", res.data.token);
-            this.$cookies.set("id", res.data.account.id);
-            this.$cookies.set("userId", res.data.profile.userId);
-            location.href = "index.vue";
+            alert('登陆成功')
+            this.$cookies.set('token', res.data.token)
+            this.$cookies.set('id', res.data.account.id)
+            this.$cookies.set('userId', res.data.profile.userId)
+            this.$cookies.set('avatarUrl', res.data.profile.avatarUrl)
+            this.$cookies.set('nickname', res.data.profile.nickname)
+            this.$cookies.set('backgroundUrl', res.data.profile.backgroundUrl)
+            location.href = 'index.vue'
           } else {
-            alert(res.data.msg);
+            alert(res.data.msg)
           }
-        });
-    },
-  },
+        })
+    }
+  }
   //  mounted() {
   //     this.axios.get('http://localhost:3000/login/status')
   //   .then(res=>{
   //     console.log(res)
   //   })
   //   },
-};
+}
 </script>
 <style scoped>
 .denglu {
