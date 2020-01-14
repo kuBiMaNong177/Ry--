@@ -102,7 +102,7 @@ export default {
     }
   },
   methods: {
-    count: function() {
+    count() {
       this.axios
         .get(
           'http://localhost:3000/user/playlist?uid=' + this.$cookies.get('id')
