@@ -1,27 +1,53 @@
-export default{
-    path:'/',
-    name:'one',
-    component:()=>import ('@/views/one'),
-    children:[
+export default [
+  {
+    path: "/index",
+    component: () => import("@/views/one"),
+
+    children: [
       {
-        path:'/',
-        name:'one',
-        component:()=>import('@/views/one/gexing.vue')
+        path: "gexing",
+        name: "Gexing",
+        component: () => import("@/views/one/gexing.vue")
       },
       {
-        path:'/gedan',
-        name:'Gedan',
-        component:()=>import('@/views/one/gedan.vue')
+        path: "gedan",
+        name: "Gedan",
+        component: () => import("@/views/one/gedan.vue")
       },
       {
-        path:'/zhubo',
-        name:'Zhubo',
-        component:()=>import('@/views/one/zhubo.vue')
+        path: "zhubo",
+        name: "Zhubo",
+        component: () => import("@/views/one/zhubo.vue")
       },
       {
-        path:'/paihang',
-        name:'Paihang',
-        component:()=>import('@/views/one/paihang.vue')
-      }
-    ]
-}
+        path: "paihang",
+        name: "Paihang",
+        component: () => import("@/views/one/paihang.vue"),
+
+      },
+      {
+        path:"/index",
+        name:"one",
+        redirect:"/index/gexing"
+      },
+      // {
+      //   path: "/*",
+      //   component: () => import("@/views/one/gexing.vue"),
+      // }
+    ],
+
+
+  },
+  {
+    path: "/search",
+    name: "Search",
+    component: () => import("@/views/one/search.vue")
+  },
+  {
+    path: "/ritiu",
+    name: "Ritiu",
+    component: () => import("@/views/one/ritiu.vue"),
+  },
+
+
+];

@@ -1,18 +1,18 @@
 <template>
    <footer class="bot">
-      <router-link class="aa" :to='{name:"one"}'>
+      <router-link tag="a" :to='{name:"one"}'>
         <span class="iconfont icon-gedan"></span>
         <em>发现音乐</em>
       </router-link>
-      <router-link :to='{name:"two"}'>
+      <router-link tag="a" :to='{name:"two"}'>
         <span class="iconfont icon-yinyue"></span>
         <em>我的音乐</em>
       </router-link>
-      <router-link :to='{name:"three"}'>
+      <router-link tag="a" :to='{name:"three"}'>
         <span class="iconfont icon-wode"></span>
         <em>朋友</em>
       </router-link>
-      <router-link :to='{name:"four"}'>
+      <router-link tag="a" :to='{name:"four"}'>
         <span class="iconfont icon-wode"></span>
         <em>账号</em>
       </router-link>
@@ -21,13 +21,26 @@
 
 <script>
 export default {
-  name: "Footer"
-};
+  name: 'Footer',
+
+  methods: {
+    // songSheet: function() {
+    //   console.log(111)
+    //   this.axios
+    //     .get(
+    //       'http://localhost:3000/user/playlist?uid=' + this.$cookies.get('id')
+    //     )
+    //     .then(res => {
+    //       console.log(res)
+    //     })
+    // }
+  }
+}
 </script>
 
 <style scoped>
 /* footer */
-.footer_bot{
+.footer_bot {
   height: 3rem;
   width: 100%;
 }
@@ -48,8 +61,8 @@ export default {
   align-items: center;
   color: rgba(170, 170, 170, 1);
 }
-.main .bot .aa {
-  color: rgba(0, 0, 0, 1);
+.main .bot a.router-link-active{
+   color: rgb(245, 9, 9);
 }
 .main .bot a span {
   font-size: 1.25rem;

@@ -80,7 +80,7 @@ export default {
 
 /* 推荐MV */
 .tiu-jian-mv .tj-t{width: 100%;height: 3.23rem;line-height:3.23rem;color:rgba(80, 80, 80, 1);font-size: 1.13rem;display: flex;justify-content: space-between;box-sizing: border-box;padding:0 1rem;}
-.tiu-jian-mv .tj-b ul{display: flex;width: 100%;flex-wrap: wrap;justify-content: space-between;}
+.tiu-jian-mv .tj-b ul{display: flex;width: 100%;flex-wrap: wrap;justify-content: space-around;}
 .tiu-jian-mv .tj-b ul li{width:12.69rem ;height:15.59rem;margin-bottom:0.98rem;}
 .tiu-jian-mv .tj-b ul li .tj-img{width:12.69rem;height: 12.69rem;position: relative;}
 .tiu-jian-mv .tj-b ul li .tj-img img{background:rgba(118, 118, 118, 1);width:100%;height:100%;}

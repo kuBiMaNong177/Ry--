@@ -4,7 +4,7 @@
     <Header class="top">
       <ul class="topContent">
         <li>
-          <img src="../../img/two 图标7.png" />
+          <img @click="moveBack()" src="../../img/two 图标7.png" />
         </li>
         <li>
           <p>歌单</p>
@@ -19,21 +19,22 @@
       <div class="songSheet">
         <dl>
           <dt>
-            <img src="../../img/two 图标9.png" />
+            <img :src="songSheetList.coverImgUrl" />
           </dt>
           <dd style="width:17.25rem;height:2.81rem;float:right;margin-top: 0.63rem">
-            <p style="color:rgba(255, 255, 255, 1);line-height:2.81rem">周杰伦</p>
+            <p style="color:rgba(255, 255, 255, 1);line-height:2.81rem">{{songSheetList.name}}</p>
           </dd>
           <dd style="width:17.25rem;height:2.81rem;float:right">
             <img
               style="width:1.85rem;height:1.85rem;border-radius:0.94rem;float:left"
-              src="../../img/two 图标9.png"
+              :src="this.$cookies.get('avatarUrl')"
             />
             <p
               style="margin-left:2.5rem;color:rgba(255, 255, 255, 1)"
-            >未登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></p>
+            >{{this.$cookies.get('nickname')}}</p>
           </dd>
         </dl>
+
         <div class="share">
           <ul class="icon">
             <li>
@@ -61,36 +62,65 @@
           <img src="../../img/two 图标14.svg" alt />
           <p>播放全部</p>
         </div>
-        <ul class="music">
-          <li>
-            <div>
-              <p>1</p>
-            </div>
-            <div>
-              <p>告白气球</p>
-              <span>周杰伦的床边故事</span>
-            </div>
-            <div>
-              <img src="../../img/two 图标15.svg" />
-              <img src="../../img/two 图标16.svg" />
-            </div>
-          </li>
-        </ul>
+        <router-link to="/play">
+          <ul class="music">
+            <li v-for="(item, index) in privilegesList" :key="index">
+              <div>
+                <p>{{index+1}}</p>
+              </div>
+              <div>
+                <p>{{item.name}}</p>
+                <span>{{item.ar[0].name}}</span>
+              </div>
+              <div>
+                <img src="../../img/two 图标15.svg" />
+                <img src="../../img/two 图标16.svg" />
+              </div>
+            </li>
+          </ul>
+        </router-link>
       </div>
     </div>
-    <Footer></Footer>
+    <div class="height">
+      <Footer></Footer>
+    </div>
   </div>
 </template>
 
 <script>
-import Footer from "@/components/footer/index.vue";
-
+import Footer from '@/components/footer/index.vue'
+import bus from '@/assets/busEvent.js'
+import axios from 'axios'
 export default {
-  name: "Three",
+  methods: {
+    moveBack() {
+      history.go(-1)
+    }
+  },
+  name: 'Three',
+  data() {
+    return {
+      privilegesList: [],
+      songSheetList: []
+    }
+  },
   components: {
     Footer
+  },
+  activated() {
+    // activated created
+    this.id = this.$route.query.id
+    this.axios
+      .get('http://localhost:3000/playlist/detail?id=' + this.id)
+      .then(res => {
+        // console.log(res.data.playlist.tracks);
+        // console.log(res.data.playlist);
+
+        this.privilegesList = res.data.playlist.tracks
+        this.songSheetList = res.data.playlist
+      })
   }
-};
+}
 </script>
 
 <style scoped>
@@ -244,5 +274,8 @@ export default {
   float: left;
   margin-left: 0.8rem;
   margin-top: 1rem;
+}
+.height {
+  min-height: 3rem;
 }
 </style>

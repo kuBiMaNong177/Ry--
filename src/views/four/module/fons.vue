@@ -3,23 +3,21 @@
     <div class="header_fu">
       <div class="header">
         <span class="header_span" @click="btns">〈</span>
-        <span class="header_span1">账号</span>
-        <span class="header_span1">关注</span>
+        <span class="header_span1">粉丝</span>
         <img src="../../../img/two 图标1.jpg" />
       </div>
     </div>
     <div>
       <ul class="ul_big">
-        <p v-if="list.length ? '' : '你还没有添加关注'" class="pp">你还没有添加关注</p>
-        <li class="li_big" v-for="(item, index) in list" :key="item.id">
+        <p v-if="list.length?'':'你还没有粉丝'" class="pp">你还没有粉丝</p>
+        <li class="li_big" v-for="item in list" :key="item.id">
           <img :src="item.avatarUrl" />
-          <p class="li_span" ref="ppp">{{ item.nickname }}</p>
-          <p class="li_span1">{{ item.signature }}</p>
-          <van-button class="btnss" type="primary" @click="alertMenu(index)">...</van-button>
+          <p class="li_span">{{item.nickname}}</p>
+          <p class="li_span1">{{item.signature}}</p>
+          <button class="btns_btn" @click="addbtn">+ 关注</button>
         </li>
       </ul>
     </div>
-    <van-action-sheet v-model="show" :actions="actions" round @select="onSelect" />
     <div class="footer_fot">
       <Footer></Footer>
     </div>
@@ -28,7 +26,6 @@
 
 <script>
 import Footer from '@/components/footer/index.vue'
-
 export default {
   name: 'Four',
 
@@ -38,43 +35,36 @@ export default {
   data() {
     return {
       list: [],
-      show: false,
-      actions: [
-        { name: [] },
-        { name: '设置备注名' },
-        { name: '发私信' },
-        { name: '取消关注' }
-      ]
+      t: 1
     }
   },
   methods: {
     btns() {
       history.go(-1)
     },
-    alertMenu(index) {
-      this.show = true
-      console.log(this.$refs.ppp[index].innerText)
-      this.actions[0].name = this.$refs.ppp[index].innerText
-      //  this.$refs.ppp.forEach(item=>{
-      //    console.log(item.innerText)
-      //    this.actions[0].name=item.innerText
-
-      //  })
-    },
-    onSelect(item) {
-      console.log(item)
-      this.show = false
-      this.$toast({
-        message: item.name,
-        duration: 500
-      })
+    // 关注api
+    addbtn() {
+      this.axios
+        .get(
+          'http://localhost:3000/follow?id=' +
+            this.$cookies.get('id') +
+            '&t=' +
+            1
+        )
+        .then(res => {
+          console.log(res)
+        })
     }
   },
+  //   粉丝用户api
   mounted() {
     this.axios
-      .get('http://localhost:3000/user/follows?uid=' + this.$cookies.get('id'))
+      .get(
+        'http://localhost:3000/user/followeds?uid=' + this.$cookies.get('id')
+      )
       .then(res => {
-        this.list = res.data.follow
+        console.log(res.data.followeds)
+        this.list = res.data.followeds
       })
   }
 }
@@ -149,7 +139,7 @@ export default {
   position: absolute;
   left: -90px;
   top: 50px;
-  width: 270px;
+  width: 305px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -162,15 +152,16 @@ export default {
   margin-top: 10%;
   color: #ccc;
 }
-/* 弹出菜单 */
-.btnss {
+.btns_btn {
+  border-radius: 50px;
+  border: 1px solid red;
+  width: 70px;
+  height: 26px;
   background: white;
-  color: #cccccc;
-  border: none;
-  font-size: 36px;
+  color: red;
+  font-size: 16px;
   position: absolute;
-  left: 330px;
-  top: 10px;
-  width: 0px;
+  left: 76%;
+  top: 33px;
 }
 </style>

@@ -1,6 +1,7 @@
 export default{
   path:'/three',
   name:'three',
+
   component:()=>import ('@/views/three'),
   
   children: [
@@ -23,3 +24,4 @@ export default{
 	redirect: '/dynamic'
 
 }
+
