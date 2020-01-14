@@ -91,7 +91,6 @@
 			}
 		},
 		mounted() {
-
 			this.axios.get("http://localhost:3000/user/event?uid=" + this.$cookies.get("id"))
 				.then(res => {
 					// console.log(res.data.events)
