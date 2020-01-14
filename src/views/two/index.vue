@@ -108,6 +108,8 @@ export default {
           'http://localhost:3000/user/playlist?uid=' + this.$cookies.get('id')
         )
         .then(res => {
+          console.log(res.data.playlist);
+
           this.list = res.data.playlist
         })
     }

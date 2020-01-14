@@ -8,7 +8,8 @@ import fourRouter from '@/router/four'
 Vue.use(VueRouter)
 
 const routes = [
-  oneRouter,
+  ...oneRouter,
+  ...twoRouter,
   threeRouter,
   fourRouter,
   ...twoRouter,
@@ -73,8 +74,14 @@ const routes = [
     path: '/PL',
     name: 'PL',
     component: () => import('@/views/four/module/PL.vue')
+  },
+  {
+    path:"/*",
+    redirect:"/index"
   }
+
 ]
+
 
 const router = new VueRouter({
   routes

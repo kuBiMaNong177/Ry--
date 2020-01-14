@@ -98,7 +98,7 @@ export default {
 
 /* 脱口秀 */
 .tiu-jian .tj-t{width: 100%;height: 3.23rem;line-height:3.23rem;color:rgba(80, 80, 80, 1);font-size: 1.13rem;font-weight: 600;}
-.tiu-jian .tj-b ul{width: 100%;display: flex;justify-content: space-between;}
+.tiu-jian .tj-b ul{width: 100%;display: flex;justify-content: space-around;}
 .tiu-jian .tj-b ul li{width:8.49rem;height:11.76rem;margin-bottom:0.98rem;}
 .tiu-jian .tj-b ul li .tj-img{width:8.49rem;height: 8.49rem;background-color: gray;margin-bottom:0.4rem;}
 .tiu-jian .tj-b ul li .tj-img img{background:rgba(118, 118, 118, 1);width: 100%;height: 100%;}

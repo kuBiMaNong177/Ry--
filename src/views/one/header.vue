@@ -2,18 +2,17 @@
   <header class="header">
     <div class="head-t">
       <i class="iconfont icon-huatong"></i>
-      <input
+
+      <router-link :to="{name:'Search'}">
+        <input
         type="text"
         placeholder="搜索音乐、歌词、电台"
-        v-model="msg"
-        @keydown.13="Serve"
+
+
       />
+      </router-link>
+
       <em class="iconfont icon-paihangbang"></em>
-      <!-- <ul class="musicList">
-        <li v-for="(v, i) in musicList" :key="i.id">
-          {{ v.name }} - {{ v.artists[0].name }}
-        </li>
-      </ul> -->
     </div>
 
     <div class="nav">
@@ -33,29 +32,18 @@
 </template>
 
 <script>
-import axios from "axios"; //引入axios插件
 export default {
   data() {
     return {
-      musicList: [],
-      msg: "",
-        classA: ["one", "Gedan", "Zhubo", "Paihang"],
+        classA: ["Gexing", "Gedan", "Zhubo", "Paihang"],
         classB: ["个性推荐", "歌单", "主播电台", "排行榜"],
       currentIndex:0
     };
   },
 
   methods: {
-    Serve() {
-      axios
-        .get(`http://localhost:3000/search?keywords=` + this.msg)
-        .then(res => {
-          console.log(res.data.result.songs);
-          this.musicList = res.data.result.songs;
-        });
-    },
 
-changeIndex(i) {
+  changeIndex(i) {
         this.currentIndex = i;
       }
   }
@@ -81,9 +69,14 @@ changeIndex(i) {
   margin-top: 0.81rem;
   color: #fffae9;
 }
+
+.header .head-t a {
+  border: 0;
+  width: 70%;
+}
 .header .head-t input {
   border: 0;
-  width: 18.6rem;
+  width: 100%;
   height: 2.43rem;
   color: #e2b3ab;
   background-color: #de635c;

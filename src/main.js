@@ -5,14 +5,17 @@ import axios from 'axios'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import '../public/css/reset.css'
 import VueCookies from 'vue-cookies'
+import '../public/css/reset.css'
 
 Vue.use(Vant)
 Vue.use(VueCookies)
 Vue.prototype.axios = axios
 Vue.config.productionTip = false
 
+window.addEventListener('popstate', function (e) {
+  router.isBack = true
+},false)
 //时间格式化过滤器
 Vue.filter('dateFormat', function(originVal) {
   const dt = new Date(originVal)
