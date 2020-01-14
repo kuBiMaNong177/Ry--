@@ -5,24 +5,17 @@ import axios from 'axios'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-<<<<<<< HEAD
 import VueCookies from 'vue-cookies'
 import '../public/css/reset.css'
-=======
-import '../public/css/reset.css'
-import VueCookies from 'vue-cookies'
->>>>>>> 291ba52fc27408c06034e009ad32083546d1f80e
 
 Vue.use(Vant)
 Vue.use(VueCookies)
 Vue.prototype.axios = axios
 Vue.config.productionTip = false
 
-<<<<<<< HEAD
 window.addEventListener('popstate', function (e) {
   router.isBack = true
 },false)
-=======
 //时间格式化过滤器
 Vue.filter('dateFormat', function(originVal) {
   const dt = new Date(originVal)
@@ -37,7 +30,6 @@ Vue.filter('dateFormat', function(originVal) {
 
   return `${y}年${m}月${d}日 ${hh}:${mm}`
 })
->>>>>>> 291ba52fc27408c06034e009ad32083546d1f80e
 
 new Vue({
   router,
