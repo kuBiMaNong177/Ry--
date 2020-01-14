@@ -6,17 +6,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import '../public/css/reset.css'
-import 'vant/lib/index.css'
 import VueCookies from 'vue-cookies'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import '../public/css/reset.css'
 
 Vue.use(Vant)
-
 Vue.use(VueCookies)
-
 Vue.prototype.axios = axios
 Vue.config.productionTip = false
 
