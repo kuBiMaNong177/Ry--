@@ -11,7 +11,7 @@
 				<img :src="item.user.avatarUrl">
 			</div>
 			<p>{{item.user.nickname}}<span>发布了：</span></p>
-			<h6>13.23</h6>
+			<h6>{{item.showTime | dateFormat}}</h6>
 			<h5>{{JSON.parse(item.json).msg}}</h5>
 			<div class="box1">
 				<img :src="item.pics[0].rectangleUrl">
