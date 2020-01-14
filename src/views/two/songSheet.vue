@@ -108,10 +108,14 @@ export default {
     Footer
   },
   activated() {
+    // activated created
     this.id = this.$route.query.id
     this.axios
       .get('http://localhost:3000/playlist/detail?id=' + this.id)
       .then(res => {
+        // console.log(res.data.playlist.tracks);
+        // console.log(res.data.playlist);
+
         this.privilegesList = res.data.playlist.tracks
         this.songSheetList = res.data.playlist
       })

@@ -10,7 +10,7 @@
           <p>我的音乐</p>
         </li>
         <li>
-          <img src="../../img/two 图标一.jpg" />
+          <img src="../../img/two 图标1.jpg" />
         </li>
       </ul>
     </Header>
@@ -108,6 +108,8 @@ export default {
           'http://localhost:3000/user/playlist?uid=' + this.$cookies.get('id')
         )
         .then(res => {
+          console.log(res.data.playlist);
+
           this.list = res.data.playlist
         })
     }
