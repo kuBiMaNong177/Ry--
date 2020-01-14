@@ -25,38 +25,47 @@
 </template>
 
 <script>
-import Footer from "@/components/footer/index.vue";
+import Footer from '@/components/footer/index.vue'
 export default {
-  name: "Four",
+  name: 'Four',
 
   components: {
     Footer
   },
   data() {
     return {
-    list:[],
-    t:1
-    };
+      list: [],
+      t: 1
+    }
   },
   methods: {
     btns() {
-      history.go(-1);
+      history.go(-1)
     },
     // 关注api
-    addbtn(){
-        this.axios.get('http://localhost:3000/follow?id='+this.$cookies.get('id')+"&t="+1)
-        .then(res=>{
-            console.log(res)
+    addbtn() {
+      this.axios
+        .get(
+          'http://localhost:3000/follow?id=' +
+            this.$cookies.get('id') +
+            '&t=' +
+            1
+        )
+        .then(res => {
+          console.log(res)
         })
     }
   },
-//   粉丝用户api
+  //   粉丝用户api
   mounted() {
-      this.axios.get('http://localhost:3000/user/followeds?uid='+this.$cookies.get("id"))
-        .then(res=>{
-            console.log(res.data.followeds)
-             this.list = res.data.followeds;
-        })
+    this.axios
+      .get(
+        'http://localhost:3000/user/followeds?uid=' + this.$cookies.get('id')
+      )
+      .then(res => {
+        console.log(res.data.followeds)
+        this.list = res.data.followeds
+      })
   }
 }
 </script>
@@ -108,7 +117,7 @@ export default {
   height: 6rem;
   position: relative;
   overflow: hidden;
-  border-bottom:1px solid #ccc
+  border-bottom: 1px solid #ccc;
 }
 .li_big img {
   width: 70px;
@@ -123,7 +132,6 @@ export default {
   position: absolute;
   left: 110px;
   top: 26px;
-  
 }
 .li_span1 {
   margin-left: 200px;
@@ -131,29 +139,29 @@ export default {
   position: absolute;
   left: -90px;
   top: 50px;
-  width:305px;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+  width: 305px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.footer_fot{
-  min-height:48px;
+.footer_fot {
+  min-height: 48px;
 }
-.pp{
-  text-align:center;
-  margin-top:10%;
-  color:#ccc
+.pp {
+  text-align: center;
+  margin-top: 10%;
+  color: #ccc;
 }
-.btns_btn{
-    border-radius:50px;
-    border:1px solid red;
-    width:70px;
-    height:26px;
-    background:white;
-    color:red;
-    font-size:16px;
-    position: absolute;
-    left:76%;
-    top:33px
+.btns_btn {
+  border-radius: 50px;
+  border: 1px solid red;
+  width: 70px;
+  height: 26px;
+  background: white;
+  color: red;
+  font-size: 16px;
+  position: absolute;
+  left: 76%;
+  top: 33px;
 }
 </style>
