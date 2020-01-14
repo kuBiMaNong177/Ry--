@@ -10,13 +10,16 @@
     </div>
     <div>
       <ul class="ul_big">
-        <p v-if="list.length?'':'你还没有添加关注'" class="pp">你还没有添加关注</p>
-        <li class="li_big" v-for="(item,index) in list" :key="item.id">
-
+        <p v-if="list.length ? '' : '你还没有添加关注'" class="pp">
+          你还没有添加关注
+        </p>
+        <li class="li_big" v-for="(item, index) in list" :key="item.id">
           <img :src="item.avatarUrl" />
-          <p class="li_span" ref="ppp">{{item.nickname}}</p>
-          <p class="li_span1">{{item.signature}}</p>
-          <van-button class="btnss" type="primary" @click="alertMenu(index)">...</van-button>
+          <p class="li_span" ref="ppp">{{ item.nickname }}</p>
+          <p class="li_span1">{{ item.signature }}</p>
+          <van-button class="btnss" type="primary" @click="alertMenu(index)"
+            >...</van-button
+          >
         </li>
       </ul>
     </div>
@@ -33,10 +36,10 @@
 </template>
 
 <script>
-import Footer from "@/components/footer/index.vue";
+import Footer from '@/components/footer/index.vue'
 
 export default {
-  name: "Four",
+  name: 'Four',
 
   components: {
     Footer
@@ -46,21 +49,21 @@ export default {
       list: [],
       show: false,
       actions: [
-        { name:[]},
-        { name: "设置备注名" },
-        { name: "发私信" },
-        { name: "取消关注" }
+        { name: [] },
+        { name: '设置备注名' },
+        { name: '发私信' },
+        { name: '取消关注' }
       ]
-    };
+    }
   },
   methods: {
     btns() {
-      history.go(-1);
+      history.go(-1)
     },
     alertMenu(index) {
-      this.show = true;
-       console.log(this.$refs.ppp[index].innerText)
-       this.actions[0].name=this.$refs.ppp[index].innerText
+      this.show = true
+      console.log(this.$refs.ppp[index].innerText)
+      this.actions[0].name = this.$refs.ppp[index].innerText
       //  this.$refs.ppp.forEach(item=>{
       //    console.log(item.innerText)
       //    this.actions[0].name=item.innerText
@@ -68,22 +71,22 @@ export default {
       //  })
     },
     onSelect(item) {
-      console.log(item);
-      this.show = false;
+      console.log(item)
+      this.show = false
       this.$toast({
         message: item.name,
         duration: 500
-      });
-    },
+      })
+    }
   },
   mounted() {
     this.axios
-      .get("http://localhost:3000/user/follows?uid=" + this.$cookies.get("id"))
+      .get('http://localhost:3000/user/follows?uid=' + this.$cookies.get('id'))
       .then(res => {
-        this.list = res.data.follow;
-      });
+        this.list = res.data.follow
+      })
   }
-};
+}
 </script>
 
 <style scoped>
@@ -169,18 +172,14 @@ export default {
   color: #ccc;
 }
 /* 弹出菜单 */
-.btnss{
-  background:white;
-  color:#CCCCCC;
-  border:none;
-  font-size:36px;
-  position:absolute;
-  left:330px;
-  top:10px;
-  width:0px;
+.btnss {
+  background: white;
+  color: #cccccc;
+  border: none;
+  font-size: 36px;
+  position: absolute;
+  left: 330px;
+  top: 10px;
+  width: 0px;
 }
 </style>
-
-
-
-

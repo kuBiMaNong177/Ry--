@@ -10,8 +10,7 @@ import "../public/css/reset.css";
 import 'vant/lib/index.css';
 import VueCookies from 'vue-cookies'
 
-Vue.use(Vant);
-
+Vue.use(Vant)
 
 Vue.use(VueCookies)
 
@@ -37,4 +36,4 @@ new Vue({
   router,
   store,
   render: h => h(App)
-}).$mount("#app");
+}).$mount('#app')
