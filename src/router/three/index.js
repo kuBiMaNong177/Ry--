@@ -19,7 +19,22 @@ export default{
 		    path: "/tjgz",
 		    name: "TJGZ",
 		    component: () => import("@/views/three/tjgz.vue")
-		  }
+		  },
+		  {
+		    path: "/play",
+		    name: "PLAY",
+		    component: () => import("@/views/two/play.vue")
+		  },
+			{
+			  path: "/sousuo",
+			  name: "SOUSUO",
+			  component: () => import("@/views/three/sousuo.vue")
+			},
+			{
+			  path: "/project",
+			  name: "PROJECT",
+			  component: () => import("@/views/three/project.vue")
+			}
       ],
 	redirect: '/dynamic'
 

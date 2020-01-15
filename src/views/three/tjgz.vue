@@ -1,7 +1,9 @@
 <template>
 	<div class="box">
 		<div class="header">
-			<input type="text" class="sousuo" placeholder="搜索用户">
+			<router-link to='sousuo'>
+				<input type="text" class="sousuo" placeholder="搜索歌手">
+			</router-link>
 		</div>
 		<div class="nearby">
 			<ul>
@@ -26,7 +28,7 @@
 					<img :src="item.picUrl">
 				</div>
 				<p>{{item.name}}</p>
-				<h6>+关注</h6>
+				<h6 @click="enter">{{con}}</h6>
 				<h5>热度{{item.score}}<span>##话题进行时</span></h5>
 			</div>
 		</div>
@@ -37,7 +39,9 @@
 	export default {
 		data() {
 			return {
-				list: []
+				list: [],
+				con:"+关注",
+				flag:false
 			}
 		},
 		mounted() {
@@ -46,9 +50,20 @@
 					// console.log(res.data.list.artists)
 					this.list = res.data.list.artists
 				})
-		}
+		},
+		methods:{
+		     enter(){
+		       this.flag=!this.flag;
+		       if(this.flag==true){
+		          this.con="已关注";
+		       }else if(this.flag==!true){
+		          this.con="+关注";
+		       }
+		     }
+		   }
 	}
 </script>
+
 
 <style>
 	.header {

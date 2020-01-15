@@ -13,7 +13,11 @@
 					<span>
 						<router-link to='near'>附近</router-link>
 					</span></li>
-				<li><img src="../../img/图标302.png" alt=""></li>
+				<li>
+					<router-link to='play'>
+						<img src="../../img/图标302.png">
+					</router-link>
+				</li>
 			</ul>
 		</header>
 		<div class="router-view">
@@ -59,7 +63,7 @@
 		color: rgba(153, 153, 153, 1);
 	}
 
-	.main .top>ul>li:nth-child(3)>img {
+	.main .top>ul>li:nth-child(3)>a>img {
 		width: 31px;
 		height: 31px;
 		color: rgba(153, 153, 153, 1);
