@@ -88,8 +88,11 @@ const routes = [
       component: () => import('@/views/four/module/sonpraise.vue')
     }],
     redirect:'/soncomment'
+  },
+  {
+    path:"/*",
+    redirect:"/index"
   }
-
 ]
 
 
