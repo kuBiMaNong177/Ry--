@@ -8,24 +8,29 @@
             <ul>
               <li>
                 <div class="tj-img">
-                  <img src="" alt="" />
+                  <img src="" ref="img2" alt="" />
                   <h2>飙升榜</h2>
                 </div>
                 <div class="tj-txt">
-                  <p>1. Put Em Up -W & W </p>
-                  <p>2. Put Em Up -W & W </p>
-                  <p>3. Put Em Up -W & W </p>
+                  <p v-for="(item,index) in smallSongList2" :key="index">{{index+1}}. {{item.name}} -  {{item.ar[0].name}}</p>
                 </div>
               </li>
               <li>
                 <div class="tj-img">
-                  <img src="" alt="" />
+                  <img src="" ref="img" alt="" />
                   <h2>热歌榜</h2>
                 </div>
                 <div class="tj-txt">
-                  <p>1. 动物世界  -  薛之谦</p>
-                  <p>2. 高尚  -  薛之谦 </p>
-                  <p>3. 木偶人 -  薛之谦 </p>
+                  <p v-for="(item,index) in smallSongList" :key="index">{{index+1}}. {{item.name}}  -  {{item.ar[0].name}}</p>
+                </div>
+              </li>
+              <li>
+                <div class="tj-img">
+                  <img src="" ref="img3" alt="" />
+                  <h2>新歌榜</h2>
+                </div>
+                <div class="tj-txt">
+                  <p v-for="(item,index) in smallSongList3" :key="index">{{index+1}}. {{item.name}} -  {{item.ar[0].name}}</p>
                 </div>
               </li>
             </ul>
@@ -92,6 +97,40 @@
 
 <script>
 export default {
+  data(){
+    return {
+      smallSongList:[],
+      smallSongList2:[],
+      smallSongList3:[]
+    }
+  },
+  //
+  beforeCreate(){
+    //热歌榜
+    this.axios.get('http://localhost:3000/top/list?idx=1').then(res=>{
+      for(let i=0;i<3;i++){
+      this.smallSongList.push(res.data.playlist.tracks.shift());
+      }
+    this.$refs.img.src=this.smallSongList[0].al.picUrl
+    })
+    //飙升榜
+    this.axios.get('http://localhost:3000/top/list?idx=3').then(res=>{
+      for(let i=0;i<3;i++){
+      this.smallSongList2.push(res.data.playlist.tracks.shift());
+      }
+    this.$refs.img2.src=this.smallSongList2[0].al.picUrl
+    })
+    //新歌榜
+    this.axios.get('http://localhost:3000/top/list?idx=0').then(res=>{
+      for(let i=0;i<3;i++){
+      this.smallSongList3.push(res.data.playlist.tracks.shift());
+      }
+    this.$refs.img3.src=this.smallSongList3[0].al.picUrl
+    })
+
+  },
+
+
 
 }
 </script>
@@ -107,7 +146,7 @@ export default {
 .tiu-jian-mv .tj-b ul{width: 100%;}
 .tiu-jian-mv .tj-b ul li{width:100%;height:7.86rem;margin-bottom:0.98rem;display: flex;}
 .tiu-jian-mv .tj-b ul li .tj-img{width:7.86rem;height: 7.86rem;background-color: gray;margin-right:0.81rem;position: relative;}
-.tiu-jian-mv .tj-b ul li .tj-img h2{position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin:auto;width: 7rem;height: 2rem;text-align: center;}
+.tiu-jian-mv .tj-b ul li .tj-img h2{position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin:auto;width: 7rem;height: 2rem;text-align: center;color:rgb(255, 255, 255);font-weight:900;}
 .tiu-jian-mv .tj-b ul li .tj-img img{background:rgba(118, 118, 118, 1);width: 100%;height: 100%;}
 .tiu-jian-mv .tj-b ul li .tj-txt p{line-height: 2.5rem;color:rgba(80, 80, 80, 1);font-size: 0.97rem;}
 

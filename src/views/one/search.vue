@@ -2,7 +2,7 @@
 <div class="main">
   <header class="se-top">
     <van-search class="ipt" placeholder="搜索音乐、歌词、电台" v-model="value" @keydown.13="Serve" />
-    <router-link :to="{name:'one'}">取消</router-link>
+    <i @click="backBtn">取消</i>
   </header>
   <div class="se-con">
     <ul v-if="value" class="se-list" ref="aalist">
@@ -14,12 +14,10 @@
       <li>我的搜索历史</li>
       <li v-for="(v, i) in history" :key="i" @click="toIpt(v)">{{v}}</li>
     </ul>
-
   </div>
   <Footer></Footer>
 </div>
 </template>
-
 <script>
 import axios from 'axios'
 import Footer from '@/components/footer/index.vue'
@@ -44,7 +42,6 @@ export default {
           this.musicList = res.data.result.songs;
           this.history.push(this.value)
           this.$refs.aalist.style.display='block'
-
         });
       }else{
         this.musicList = []
@@ -56,28 +53,25 @@ export default {
         if(res.data.data[0].url){
           open(res.data.data[0].url)
         }
-
       })
     },
     toIpt(v){
       this.value = v
+    },
+    backBtn(){
+      history.go(-1)
     }
-  },
-  // computed:{
-  //   chong(){
-  //     this.musicList = this.Serve
-  //   }
-  // }
+  }
 }
 </script>
 
 <style scoped>
 .main .se-top{height: 3.56rem;width:100%;background: #d83f37;display: flex;}
-.main .se-top a{width:4rem;text-align: center;align-self: center;color: aliceblue}
+.main .se-top i{width:4rem;text-align: center;align-self: center;color: aliceblue}
 .main .se-top .ipt .van-search__content{color: #493e3d;background-color: #de635c;}
 .main .se-top .van-search{background: #d83f37!important;flex:1}
 .main .se-con{flex: 1;overflow-y: auto;}
-.main .se-con .se-list{width: 100%;overflow-y: auto; background: gray;box-sizing: border-box;padding:1rem 1.5rem 3rem;display: none}
+.main .se-con .se-list{width: 100%;overflow-y: auto; background: #eee;box-sizing: border-box;padding:1rem 1.5rem 3rem;display: none}
 .main .se-con .se-list li{cursor: pointer; line-height:3rem;border-bottom: 1px solid #333;font-size:1.2rem; width:100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 
 </style>
