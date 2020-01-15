@@ -2,7 +2,11 @@
   <div class="content">
 
    <div class="banner">
-     <img src="" alt="">
+    <van-swipe :autoplay="3000" indicator-color="white" style="height:100%">
+          <van-swipe-item v-for="(item,index) in dj" :key="index" >
+            <img :src="item.pic" alt="" width="100%">
+          </van-swipe-item>
+        </van-swipe>
    </div>
    <div class="siren">
      <div class="s-con">
@@ -25,13 +29,13 @@
     </div>
     <div class="tj-b">
       <ul>
-        <li v-for="(item) in playlists " :key="item.id" >
+        <router-link tag="li" :to='{name:"songSheet",query:{id:item.id}}' v-for="(item) in playlists " :key="item.id" >
           <div class="tj-img">
             <img :src="item.coverImgUrl" alt="">
             <span class="iconfont icon-yinyue">{{item.trackCount}}万</span>
           </div>
           <p>{{item.name}}</p>
-        </li>
+        </router-link>
       </ul>
     </div>
    </div>
@@ -42,13 +46,13 @@
     </div>
     <div class="tj-b">
       <ul>
-        <li v-for="(item) in playlists2" :key="item.id">
+        <router-link tag="li" :to="{name:'songSheet',query:{id:item.id}}" v-for="(item) in playlists2" :key="item.id">
           <div class="tj-img">
             <img :src="item.coverImgUrl" alt="">
             <span class="iconfont icon-yinyue">{{item.trackCount}}万</span>
           </div>
           <p>{{item.name}}</p>
-        </li>
+        </router-link>
 
 
       </ul>
@@ -61,7 +65,7 @@
     </div>
     <div class="tj-b">
       <ul>
-        <li v-for="(item) in playlists3" :key="item.id">
+        <router-link tag="li" :to="{name:'mvItem',query:{id:item.id}}" v-for="(item) in playlists3" :key="item.id">
           <div class="tj-img">
             <img :src="item.picUrl" alt="">
           </div>
@@ -69,7 +73,7 @@
             <p>{{item.name}}</p>
             <p>{{item.artistName}}</p>
           </div>
-        </li>
+        </router-link>
 
       </ul>
     </div>
@@ -84,10 +88,16 @@ export default {
     return {
       playlists:[],
       playlists2:[],
-      playlists3:[]
+      playlists3:[],
+      dj:[]
     }
   },
   created(){
+    this.axios.get('http://localhost:3000/dj/banner').then(res=>{
+      // console.log(res.data.data);
+      this.dj = res.data.data
+    })
+
     this.axios.get('http://localhost:3000/top/playlist/highquality'+'?limit=6').then(res=>{
       // console.log(res.data.playlists);
       this.playlists = res.data.playlists
@@ -113,7 +123,7 @@ export default {
   display: none;
 }
 
-.content .banner{width: 100%;height:8.89rem;background-color: rgba(238, 238, 238, 1);}
+.content .banner{width: 100%;height:10rem;background-color: rgba(238, 238, 238, 1);}
 
 .content .siren{width:100%;height:6.47rem;display: flex;justify-content: space-between;margin:1.29rem 0;border-bottom:1px solid #E3E5E4;}
 .content .siren .s-con{flex: 1;height:6.47rem;text-align: center;}
@@ -126,7 +136,7 @@ export default {
 .tiu-jian .tj-b ul li{width:8.49rem ;height:12.37rem;margin-bottom:0.98rem;}
 .tiu-jian .tj-b ul li .tj-img{width:8.49rem;height: 8.49rem;position: relative;}
 .tiu-jian .tj-b ul li .tj-img img{background:rgba(118, 118, 118, 1);width:100%;height:100%;}
-.tiu-jian .tj-b ul li .tj-img span{position: absolute;top: 0;right:0;font-size: 0.97rem;color: rgba(118, 118, 118, 1);}
+.tiu-jian .tj-b ul li .tj-img span{position: absolute;top: 0;right:0;font-size: 0.97rem;color: #fff;}
 .tiu-jian .tj-b ul li p{height: 3.88rem;color: rgba(80, 80, 80, 1);font-size: 0.89rem;line-height:150%;padding-top:10px;box-sizing: border-box;}
 /* 推荐MV */
 .tiu-jian-mv .tj-t{width: 100%;height: 3.23rem;line-height:3.23rem;color:rgba(80, 80, 80, 1);font-size: 1.13rem;font-weight:600;}

@@ -14,43 +14,19 @@
    <!-- 推荐MV -->
    <div class="tiu-jian-mv">
     <div class="tj-t">
-      <h3>推荐MV></h3>
+      <h3>全部歌单</h3>
       <p>欧美 丨 民谣 | 电子</p>
     </div>
     <div class="tj-b">
       <ul>
-        <li>
+        <router-link tag="li" :to='{name:"songSheet",query:{id:item.id}}' v-for="(item) in playlists " :key="item.id" >
           <div class="tj-img">
-            <img src="http://t8.baidu.com/it/u=3571592872,3353494284&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1579225964&t=8603735a6d69de8fd2e60c7391fccccc" alt="">
-            <i class="iconfont icon-yinyue"></i>
-            <span>207万</span>
+            <img :src="item.coverImgUrl" alt="">
+            <span class="iconfont icon-yinyue">{{item.trackCount}}万</span>
           </div>
-          <p>年度最受欢迎个性推进按歌曲</p>
-        </li>
-        <li>
-          <div class="tj-img">
-            <img src="" alt="">
-            <i class="iconfont icon-yinyue"></i>
-            <span>207万</span>
-          </div>
-          <p>年度最受欢迎个性推进按歌曲</p>
-        </li>
-        <li>
-          <div class="tj-img">
-            <img src="" alt="">
-            <i class="iconfont icon-yinyue"></i>
-            <span>207万</span>
-          </div>
-          <p>年度最受欢迎个性推进按歌曲</p>
-        </li>
-        <li>
-          <div class="tj-img">
-            <img src="" alt="">
-            <i class="iconfont icon-yinyue"></i>
-            <span>207万</span>
-          </div>
-          <p>年度最受欢迎个性推进按歌曲</p>
-        </li>
+          <p>{{item.name}}</p>
+        </router-link>
+
 
       </ul>
     </div>
@@ -60,6 +36,17 @@
 
 <script>
 export default {
+  data(){
+    return {
+      playlists:[]
+    }
+  },
+  created(){
+    this.axios.get('http://localhost:3000/top/playlist/highquality'+'?limit=4').then(res=>{
+      // console.log(res.data.playlists);
+      this.playlists = res.data.playlists
+    })
+  }
 
 }
 </script>
@@ -70,7 +57,7 @@ export default {
 .content::-webkit-scrollbar {
   display: none;
 }
-.content .banner{width: 100%;height:9.7rem;background-color: rgba(136, 136, 136, 1);display: flex;}
+.content .banner{width: 100%;height:9.7rem;background:url("http://img4.imgtn.bdimg.com/it/u=1040628782,1354239620&fm=26&gp=0.jpg");background-size:100% 100%; display: flex;}
 .banner .ban-l{width: 7.82rem;height:7.82rem;widows: 7.82rem;background:red;margin:0.94rem 0.63rem 0;}
 .banner .ban-r{height: 5.63rem;margin:0.94rem 0.63rem 0;line-height:2.1rem;}
 .banner .ban-r h2{margin-bottom: 0.97rem;font-size: 1.29rem;color: rgba(255, 255, 255, 1);}

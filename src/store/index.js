@@ -9,7 +9,7 @@ export default new Vuex.Store({
   state: {
     counts: 0,
     count: 0,
-    count_dynamic:0
+    count_dynamic:0,
   },
   mutations: {
     add(state, playltoad) {
@@ -31,6 +31,7 @@ export default new Vuex.Store({
         .then(res => {
           this.state.count_dynamic = res.data.events.length
         });
+
     },
   },
   actions: {
