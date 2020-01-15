@@ -2,8 +2,8 @@
 	<div class="naver">
 		<div class="nav">
 			<ul>
-				<li><img src="@/img/图标304.png"><span>发动态</span></li>
-				<li><img src="@/img/图标305.png"><span>发短视频</span></li>
+				<li><router-link to='project'><img src="@/img/图标304.png"><span>发动态</span></router-link></li>
+				<li><router-link to='project'><img src="@/img/图标305.png"><span>发短视频</span></router-link></li>
 			</ul>
 		</div>
 		<div class="dong" v-for="(item,id) in list" :key="item.id">
@@ -19,7 +19,7 @@
 			<ul>
 				<li><img @click="item.info.likedCount++" src="@/img/图标306.png">{{item.info.likedCount}}</li>
 				<li><img src="@/img/图标307.png">{{item.info.commentCount}}</li>
-				<li><img src="@/img/图标308.png">转发</li>
+				<li><img src="@/img/图标308.png"><router-link to='project'>转发</router-link></li>
 			</ul>
 		</div>
 		<!-- <div class="bofang">
@@ -93,7 +93,7 @@
 		mounted() {
 			this.axios.get("http://localhost:3000/user/event?uid=" + this.$cookies.get("id"))
 				.then(res => {
-					// console.log(res.data.events)
+					console.log(res.data.events)
 					this.list = res.data.events
 				})
 		}
@@ -116,7 +116,7 @@
 		line-height: 1.5rem;
 	}
 
-	.nav>ul>li>img {
+	.nav>ul>li>a>img {
 		width: 24px;
 		height: 24px;
 		display: inline;
