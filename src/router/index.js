@@ -72,7 +72,21 @@ const routes = [
     //评论
     path: '/PL',
     name: 'PL',
-    component: () => import('@/views/four/module/PL.vue')
+    component: () => import('@/views/four/module/PL.vue'),
+    children: [{
+      path: '/soncomment',
+      name: 'soncomment',
+      component: () => import('@/views/four/module/soncomment.vue')
+    },{
+      path: '/sontransmit',
+      name: 'sontransmit',
+      component: () => import('@/views/four/module/sontransmit.vue')
+    },{
+      path: '/sonpraise',
+      name: 'sonpraise',
+      component: () => import('@/views/four/module/sonpraise.vue')
+    }],
+    redirect:'/soncomment'
   }
 ]
 

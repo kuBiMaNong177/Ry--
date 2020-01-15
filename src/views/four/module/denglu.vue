@@ -1,6 +1,6 @@
 <template>
   <div class="over">
-    
+
     <div class="back">
       <header class="header_one">登陆</header>
       <img class="logo" src="../../../images/logo.png" alt />
@@ -74,6 +74,7 @@ export default {};
   top: 260px;
   font-size: 20px;
   color: red;
+  cursor:pointer;
 }
 .btn1:active {
   background: red;
@@ -90,6 +91,7 @@ export default {};
   top: 330px;
   font-size: 20px;
   color: red;
+  cursor:pointer;
 }
 .btn2:active {
   background: red;

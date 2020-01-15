@@ -1,7 +1,7 @@
 <template>
   <div class="over">
     <div class="denglu">
-      <button @click="btns">〈</button>
+      <button class="ppppp" @click="btns">〈</button>
       <p>手机号注册</p>
     </div>
     <div class="input_1">
@@ -78,6 +78,9 @@ export default {
 };
 </script>
 <style scoped>
+.ppppp{
+  cursor:pointer;
+}
 .denglu {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
@@ -151,6 +154,7 @@ export default {
   margin-top: 110px;
   margin-left: 10%;
   border: none;
+  cursor:pointer;
 }
 .over {
   height: 667px;
@@ -198,6 +202,7 @@ export default {
   border: none;
   background: chartreuse;
   color: white;
+  cursor:pointer;
 }
 
 .footer_p {

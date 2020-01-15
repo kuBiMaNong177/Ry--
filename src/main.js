@@ -21,15 +21,15 @@ Vue.config.productionTip = false
 Vue.filter('dateFormat', function(originVal) {
   const dt = new Date(originVal)
 
-  const y = dt.getFullYear()//年
-  const m = (dt.getMonth() + 1 + '').padStart(2, '0')//月
+  // const y = dt.getFullYear()//年
+  const m = (dt.getMonth() + 1 + '').padStart(2,)//月
   const d = (dt.getDate() + '').padStart(2, '0')//日
 
   const hh = (dt.getHours() + '').padStart(2, '0')//时
   const mm = (dt.getMinutes() + '').padStart(2, '0')//分
   const ss = (dt.getSeconds() + '').padStart(2, '0')//秒
 
-  return `${y}年${m}月${d}日 ${hh}:${mm}`
+  return `${m}月${d}日 ${hh}:${mm}`
 })
 
 new Vue({

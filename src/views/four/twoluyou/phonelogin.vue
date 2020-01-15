@@ -1,7 +1,7 @@
 <template>
   <div class="over">
     <div class="denglu">
-      <button @click="btns">〈</button>
+      <button class="ppppp" @click="btns">〈</button>
       <p>手机号登陆</p>
     </div>
     <div class="input_1">
@@ -40,7 +40,7 @@ export default {
           console.log(res)
 
           if (res.data.code == 200) {
-            alert('登陆成功')
+            // alert('登陆成功')
             this.$cookies.set('token', res.data.token)
             this.$cookies.set('id', res.data.account.id)
             this.$cookies.set('userId', res.data.profile.userId)
@@ -63,6 +63,9 @@ export default {
 }
 </script>
 <style scoped>
+.ppppp{
+  cursor:pointer;
+}
 .denglu {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
@@ -132,6 +135,7 @@ export default {
   margin-top: 90px;
   margin-left: 10%;
   border: none;
+  cursor:pointer;
 }
 .over {
   overflow-y: hidden;

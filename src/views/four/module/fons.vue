@@ -101,6 +101,7 @@ export default {
   line-height: 2.3;
   color: white;
   font-size: 20px;
+  cursor:pointer;
 }
 
 .li_big {

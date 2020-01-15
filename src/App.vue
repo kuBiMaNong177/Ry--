@@ -1,10 +1,9 @@
 <template>
   <keep-alive>
-    <!-- <transition name="slide-fade"> -->
 
-<transition>
+<!-- <transition> -->
     <router-view></router-view>
-    </transition>
+    <!-- </transition> -->
   </keep-alive>
 </template>
 
