@@ -8,7 +8,8 @@ import fourRouter from '@/router/four'
 Vue.use(VueRouter)
 
 const routes = [
-  oneRouter,
+  ...oneRouter,
+  ...twoRouter,
   threeRouter,
   fourRouter,
   ...twoRouter,
@@ -88,7 +89,9 @@ const routes = [
     }],
     redirect:'/soncomment'
   }
+
 ]
+
 
 const router = new VueRouter({
   routes
