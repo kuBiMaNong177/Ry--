@@ -42,7 +42,7 @@ export default {
 
 };
 
-  
+
 </script>
 
 <style scoped>
@@ -54,6 +54,12 @@ export default {
   text-align:center;
     border-top:1px solid #CCCCCC;
 
+}
+.fade-enter-active, .fade-leave-avtive {
+    transition: opacity 1s
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0
 }
 .ccc_1{margin-top:0.3rem}
 .ccc_2{margin-top:0.3rem}

@@ -62,9 +62,13 @@
           <img src="../../img/two 图标14.svg" alt />
           <p>播放全部</p>
         </div>
-        <router-link to="/play">
+        <router-link
+          v-for="(item, index) in privilegesList"
+          :key="index"
+          :to="{name:'play',query: { musicId: item.id }}"
+        >
           <ul class="music">
-            <li v-for="(item, index) in privilegesList" :key="index">
+            <li>
               <div>
                 <p>{{index+1}}</p>
               </div>

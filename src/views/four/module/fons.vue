@@ -110,6 +110,7 @@ export default {
   line-height: 2.3;
   color: white;
   font-size: 20px;
+  cursor:pointer;
 }
 
 .li_big {
@@ -132,6 +133,7 @@ export default {
   position: absolute;
   left: 110px;
   top: 26px;
+
 }
 .li_span1 {
   margin-left: 200px;

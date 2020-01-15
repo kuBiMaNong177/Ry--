@@ -8,7 +8,8 @@
           <img src="../../img/two 图标1.jpg" />
         </div>
       </div>
-      <div class="wrapper_276">
+      <!-- v-if="this.$cookies.get('token')" -->
+      <div   class="wrapper_276">
         <div class="box_border">
           <img :src="img" alt="">
         </div>
@@ -20,7 +21,8 @@
         <!-- 动态  关注  粉丝  我的资料组件 -->
         <fans class="fans"></fans>
       </div>
-      <van-index-anchor class="anchor_title_one"></van-index-anchor>
+      <div class="beij">
+        <van-index-anchor class="anchor_title_one"></van-index-anchor>
       <div class="img_1">
         <img src="../../images/3.svg" alt />
         <span>我的消息</span>
@@ -98,9 +100,11 @@
         <em>〉</em>
       </div>
       <router-link :to="{name:'denglu'}">
-        <button @click="delebtn" class="btn_footer">退出登陆</button>
+        <!-- v-if="list.length?'':'你还没有粉丝'" -->
+        <button v-if="this.$cookies.get('token')" class="btn_footer">退出登陆</button>
       </router-link>
     </div>
+      </div>
     <div class="footer_one">
       <Footer></Footer>
     </div>
@@ -140,7 +144,7 @@ export default {
   },
 };
 
-  
+
 </script>
 
 <style scoped>
@@ -150,7 +154,7 @@ export default {
 }
 .main {
   background: #eeeff0;
-  height: 61.1rem;
+  min-height: 10rem;
 }
 .header_fu {
   width: 100%;
@@ -259,6 +263,7 @@ export default {
   border: none;
   background: white;
   margin-top: 10px;
+  margin-bottom:10px;
   color: red;
 }
 .img_1:active {
@@ -281,6 +286,10 @@ export default {
 }
 .img_1 em {
   float: right;
+}
+.beij{width:100%;min-height:50px}
+.footer_one{
+  height:3rem;
 }
 </style>
 

@@ -3,7 +3,7 @@
     <div class="header_fu">
       <div class="header">
         <span class="header_span" @click="btns">〈</span>
-        <span class="header_span1">账号</span>
+        <!-- <span class="header_span1">账号</span> -->
         <span class="header_span1">关注</span>
         <img src="../../../img/two 图标1.jpg" />
       </div>
@@ -120,6 +120,7 @@ export default {
   line-height: 2.3;
   color: white;
   font-size: 20px;
+  cursor:pointer;
 }
 
 .li_big {
