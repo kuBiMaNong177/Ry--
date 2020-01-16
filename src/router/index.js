@@ -61,40 +61,48 @@ const routes = [
     //粉丝
     path: '/fons',
     name: 'fons',
-    component: () => import('@/views/four/module/fons.vue'),
+    component: () => import('@/views/four/module/fons.vue')
   },
   {
     //动态
     path: '/dynamic',
     name: 'dynamic',
-    component: () => import('@/views/four/module/dynamic.vue'),
+    component: () => import('@/views/four/module/dynamic.vue')
   },
   {
     //评论
     path: '/PL',
     name: 'PL',
     component: () => import('@/views/four/module/PL.vue'),
-    children: [{
-      path: '/soncomment',
-      name: 'soncomment',
-      component: () => import('@/views/four/module/soncomment.vue')
-    },{
-      path: '/sontransmit',
-      name: 'sontransmit',
-      component: () => import('@/views/four/module/sontransmit.vue')
-    },{
-      path: '/sonpraise',
-      name: 'sonpraise',
-      component: () => import('@/views/four/module/sonpraise.vue')
-    }],
-    redirect:'/soncomment'
+    children: [
+      {
+        path: '/soncomment',
+        name: 'soncomment',
+        component: () => import('@/views/four/module/soncomment.vue')
+      },
+      {
+        path: '/sontransmit',
+        name: 'sontransmit',
+        component: () => import('@/views/four/module/sontransmit.vue')
+      },
+      {
+        path: '/sonpraise',
+        name: 'sonpraise',
+        component: () => import('@/views/four/module/sonpraise.vue')
+      },
+      {
+        path: '/play',
+        name: 'PLAY',
+        component: () => import('@/views/two/play.vue')
+      }
+    ],
+    redirect: '/soncomment'
   },
   {
-    path:"/*",
-    redirect:"/index"
+    path: '/*',
+    redirect: '/index'
   }
 ]
-
 
 const router = new VueRouter({
   routes

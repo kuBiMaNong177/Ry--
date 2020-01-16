@@ -1,13 +1,6 @@
 
-
-
 <template>
-
-      <!-- <transition :name="transitionName"> -->
-          <keep-alive >
-              <router-view ></router-view>
-          </keep-alive>
-      <!-- </transition> -->
-
+  <keep-alive exclude="play">
+    <router-view></router-view>
+  </keep-alive>
 </template>
-

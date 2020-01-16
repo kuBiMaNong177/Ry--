@@ -67,7 +67,7 @@
           :key="index"
           :to="{name:'play',query: { musicId: item.id }}"
         >
-          <ul class="music">
+          <ul class="music" @click="musicIds(item.id)">
             <li>
               <div>
                 <p>{{index+1}}</p>
@@ -99,6 +99,11 @@ export default {
   methods: {
     moveBack() {
       history.go(-1)
+    },
+
+    //点击获取id，把id存到localStorage里面
+    musicIds(id) {
+      localStorage.setItem('id', id)
     }
   },
   name: 'Three',
@@ -117,9 +122,6 @@ export default {
     this.axios
       .get('http://localhost:3000/playlist/detail?id=' + this.id)
       .then(res => {
-        // console.log(res.data.playlist.tracks);
-        // console.log(res.data.playlist);
-
         this.privilegesList = res.data.playlist.tracks
         this.songSheetList = res.data.playlist
       })

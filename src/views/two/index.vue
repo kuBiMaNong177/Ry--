@@ -10,7 +10,9 @@
           <p>我的音乐</p>
         </li>
         <li>
-          <img src="../../img/two 图标1.jpg" />
+          <router-link to="/play">
+            <img src="../../img/two 图标1.jpg" />
+          </router-link>
         </li>
       </ul>
     </Header>
@@ -159,7 +161,7 @@ export default {
   font-weight: 400;
   color: #ffffff;
 }
-.topContent > li:nth-child(3) > img {
+.topContent > li:nth-child(3) > a > img {
   width: 1.94rem;
   height: 1.94rem;
   margin-top: 0.9rem;
