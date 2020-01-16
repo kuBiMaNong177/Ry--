@@ -7,7 +7,7 @@
           <img @click="moveBack()" src="../../img/two 图标7.png" />
         </li>
         <li>
-          <p>歌单</p>
+          <p>排行榜</p>
         </li>
         <li>
           <img src="../../img/two 图标8.png" />
@@ -19,7 +19,7 @@
       <div class="songSheet">
         <dl>
           <dt>
-            <img :src="songSheetList.coverImgUrl" />
+            <img src="" ref="img" />
           </dt>
           <dd style="width:17.25rem;height:2.81rem;float:right;margin-top: 0.63rem">
             <p style="color:rgba(255, 255, 255, 1);line-height:2.81rem">{{songSheetList.name}}</p>
@@ -117,14 +117,17 @@ export default {
     Footer
   },
   activated() {
-    // activated created
-    this.id = this.$route.query.id
-    this.axios
-      .get('http://localhost:3000/playlist/detail?id=' + this.id)
-      .then(res => {
-        this.privilegesList = res.data.playlist.tracks
-        this.songSheetList = res.data.playlist
-      })
+   let num = this.$route.query.num
+
+    this.axios.get('http://localhost:3000/top/list?idx=' + num).then(res=>{
+      // console.log(res.data.playlist);
+      this.$refs.img.src = res.data.playlist.coverImgUrl
+      this.privilegesList = res.data.playlist.tracks
+    })
+  },
+  destroyed(){
+    console.log('组件销毁');
+
   }
 }
 </script>

@@ -38,22 +38,30 @@ export default {
         axios
         .get(`http://localhost:3000/search?keywords=` + this.value)
         .then(res => {
-          console.log(res.data.result.songs);
+          // console.log(res.data.result.songs);
           this.musicList = res.data.result.songs;
           this.history.push(this.value)
           this.$refs.aalist.style.display='block'
         });
-      }else{
+      }else{2
         this.musicList = []
       }
     },
     toSong(id){
-      axios.get('http://localhost:3000/song/url?id='+id).then(res=>{
-        // console.log(res.data.data[0].url);
-        if(res.data.data[0].url){
-          open(res.data.data[0].url)
-        }
+
+      localStorage.setItem('id', id)
+
+      this.$router.push({
+        name:'play',
+        query:{ musicId: id }
       })
+
+      /* axios.get('http://localhost:3000/song/url?id='+id).then(res=>{
+        console.log(res.data.data);
+        // if(res.data.data[0].url){
+        //   open(res.data.data[0].url)
+        // }
+      }) */
     },
     toIpt(v){
       this.value = v
