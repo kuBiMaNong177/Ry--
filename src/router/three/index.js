@@ -3,10 +3,10 @@ export default{
   name:'three',
 
   component:()=>import ('@/views/three'),
-  
+
   children: [
         {
-          path: "/dynamic",
+          path: "/dynamicxx",
           name: "DYNAMAIC",
           component: () => import("@/views/three/dynamic.vue")
         },
@@ -19,11 +19,6 @@ export default{
 		    path: "/tjgz",
 		    name: "TJGZ",
 		    component: () => import("@/views/three/tjgz.vue")
-		  },
-		  {
-		    path: "/play",
-		    name: "PLAY",
-		    component: () => import("@/views/two/play.vue")
 		  },
 			{
 			  path: "/sousuo",

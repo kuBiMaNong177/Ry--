@@ -45,6 +45,11 @@ const routes = [
     component: () => import('@/views/four/twoluyou/enroll.vue')
   },
   {
+    path: "/play",
+    name: "PLAY",
+    component: () => import("@/views/two/play.vue")
+  },
+  {
     //关注
     path: '/attention',
     name: 'attention',
@@ -65,9 +70,9 @@ const routes = [
   },
   {
     //动态
-    path: '/dynamic',
-    name: 'dynamic',
-    component: () => import('@/views/four/module/dynamic.vue'),
+    path: '/dynamichou',
+    name: 'dynamichou',
+    component: () => import('@/views/four/module/dynamichou.vue'),
   },
   {
     //评论
@@ -88,6 +93,9 @@ const routes = [
       component: () => import('@/views/four/module/sonpraise.vue')
     }],
     redirect:'/soncomment'
+  },{
+    path:'/*',
+    redirect:'/index'
   }
 
 ]
