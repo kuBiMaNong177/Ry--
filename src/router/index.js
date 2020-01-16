@@ -74,6 +74,12 @@ const routes = [
     name: 'dynamichou',
     component: () => import('@/views/four/module/dynamichou.vue'),
   },
+		//播放
+	{
+	  path: "/play",
+	  name: "PLAY",
+	  component: () => import("@/views/two/play.vue")
+	},
   {
     //评论
     path: '/PL',

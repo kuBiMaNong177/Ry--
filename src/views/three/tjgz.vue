@@ -29,7 +29,7 @@
 				</div>
 				<p>{{item.name}}</p>
 				<h6 @click="enter">{{con}}</h6>
-				<h5>热度{{item.score}}<span>##话题进行时</span></h5>
+				<h5>歌曲数：{{item.musicSize}}<span>##话题进行时</span></h5>
 			</div>
 		</div>
 	</div>
@@ -45,10 +45,10 @@
 			}
 		},
 		mounted() {
-			this.axios.get("http://localhost:3000/toplist/artist")
+			this.axios.get("http://localhost:3000/top/artists?offset=0&limit=30")
 				.then(res => {
-					// console.log(res.data.list.artists)
-					this.list = res.data.list.artists
+					console.log(res.data.artists)
+					this.list = res.data.artists
 				})
 		},
 		methods:{
@@ -65,7 +65,7 @@
 </script>
 
 
-<style>
+<style scoped>
 	.header {
 		height: 1.75rem;
 		width: 100%;
