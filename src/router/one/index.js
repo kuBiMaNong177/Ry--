@@ -48,6 +48,11 @@ export default [
     name: "Ritiu",
     component: () => import("@/views/one/ritiu.vue"),
   },
+  {
+    path:"/mvitem",
+    name:"mvItem",
+    component:()=>import("@/views/one/mvItem.vue")
+  }
 
 
 ];

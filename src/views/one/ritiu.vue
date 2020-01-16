@@ -10,7 +10,7 @@
   </Header>
   <div class="con">
     <div class="banner">
-      <img src="" alt="">
+      <img src="http://img3.imgtn.bdimg.com/it/u=1808440736,2594609531&fm=26&gp=0.jpg" alt="">
       <p>根据你的音乐口味,每天 6:00 更新</p>
     </div>
     <div class="bo">
@@ -86,6 +86,15 @@ export default {
   components:{
     Footer
   },
+  created(){
+    /* console.log(this.$cookies.get('token'));
+
+    this.axios('http://localhost:3000/login/status',
+      {headers:{token:this.$cookies.get('token')}}
+    ).then(res=>{
+      console.log(res);
+    }) */
+  }
 }
 
 </script>

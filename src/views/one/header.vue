@@ -7,8 +7,6 @@
         <input
         type="text"
         placeholder="搜索音乐、歌词、电台"
-
-
       />
       </router-link>
 
@@ -105,6 +103,7 @@ export default {
   text-align: center;
   font-size: 1rem;
   color: #fffae9;
+  /* transition: all .9s; */
 }
 .header .nav .active {
   color: #fffae9;

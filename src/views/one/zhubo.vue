@@ -2,7 +2,11 @@
   <div class="content">
         <!-- banner -->
         <div class="banner">
-          <img src="" alt="" />
+          <van-swipe :autoplay="3000" indicator-color="white" style="height:100%">
+          <van-swipe-item v-for="(item,index) in dj" :key="index" >
+            <img :src="item.pic" alt="">
+          </van-swipe-item>
+        </van-swipe>
         </div>
         <!-- 电台分类 -->
         <div class="sort">
@@ -68,6 +72,19 @@
 
 <script>
 export default {
+
+  data(){
+    return {
+      dj:[]
+    }
+  },
+
+  created(){
+    this.axios.get('http://localhost:3000/dj/banner').then(res=>{
+      // console.log(res.data.data);
+      this.dj = res.data.data
+    })
+  }
 
 }
 </script>

@@ -66,7 +66,7 @@ const routes = [
     //粉丝
     path: '/fons',
     name: 'fons',
-    component: () => import('@/views/four/module/fons.vue'),
+    component: () => import('@/views/four/module/fons.vue')
   },
   {
     //动态
@@ -97,9 +97,7 @@ const routes = [
     path:'/*',
     redirect:'/index'
   }
-
 ]
-
 
 const router = new VueRouter({
   routes
