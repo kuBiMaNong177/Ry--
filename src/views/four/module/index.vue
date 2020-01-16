@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="ccc">
-      <router-link :to="{name:'dynamic'}">
+      <router-link :to="{name:'dynamichou'}">
         <li class="ccc_1">
         动态
         <br />
