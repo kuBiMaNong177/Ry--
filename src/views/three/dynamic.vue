@@ -100,7 +100,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.nav {
 		background-color: red;
 		border-bottom: #eeeff0 0.25rem solid;

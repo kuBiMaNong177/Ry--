@@ -20,11 +20,6 @@ export default{
 		    name: "TJGZ",
 		    component: () => import("@/views/three/tjgz.vue")
 		  },
-		  {
-		    path: "/play",
-		    name: "PLAY",
-		    component: () => import("@/views/two/play.vue")
-		  },
 			{
 			  path: "/sousuo",
 			  name: "SOUSUO",
