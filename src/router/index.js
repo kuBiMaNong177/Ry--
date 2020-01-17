@@ -12,7 +12,6 @@ const routes = [
   ...twoRouter,
   threeRouter,
   fourRouter,
-  ...twoRouter,
   {
     //登陆路由
     path: '/denglu',
@@ -45,11 +44,6 @@ const routes = [
     component: () => import('@/views/four/twoluyou/enroll.vue')
   },
   {
-    path: "/play",
-    name: "PLAY",
-    component: () => import("@/views/two/play.vue")
-  },
-  {
     //关注
     path: '/attention',
     name: 'attention',
@@ -74,12 +68,6 @@ const routes = [
     name: 'dynamichou',
     component: () => import('@/views/four/module/dynamichou.vue'),
   },
-		//播放
-	{
-	  path: "/play",
-	  name: "PLAY",
-	  component: () => import("@/views/two/play.vue")
-	},
   {
     //评论
     path: '/PL',

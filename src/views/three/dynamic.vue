@@ -16,6 +16,11 @@
 			<div class="box1">
 				<img :src="item.pics[0].rectangleUrl">
 			</div>
+			<div class="audio">
+				<img :src="JSON.parse(item.json).song.album.picUrl">
+				<p>{{JSON.parse(item.json).song.name}}</p>
+				<span>{{JSON.parse(item.json).song.artists[0].name}}</span>
+			</div>
 			<ul>
 				<li><img @click="item.info.likedCount++" src="@/img/图标306.png">{{item.info.likedCount}}</li>
 				<li><img src="@/img/图标307.png">{{item.info.commentCount}}</li>
@@ -111,7 +116,7 @@
 		justify-content: space-around;
 	}
 
-	.nav>ul>li>span {
+	.nav>ul>li>a>span {
 		color: white;
 		line-height: 1.5rem;
 	}
@@ -179,7 +184,15 @@
 		height: 0.875rem;
 		display: inline;
 	}
-
+	.dong .audio{
+		width: 60.5%;
+		height: 2.5rem;
+		background: #f1f3f2;
+		margin-left: 14.5%;
+		cursor:pointer;}
+	.dong .audio img{width: 2.5rem;height: 2.5rem;display: inline;}
+	.dong .audio p{font-size: 0.75rem;margin-top: -2.55rem;}
+	.dong .audio span{font-size: 0.625rem;margin-left:4rem ;}
 	.dong ul {
 		/* margin-top: 0.625rem; */
 		padding: 1.25rem;
