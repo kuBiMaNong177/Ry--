@@ -54,7 +54,7 @@
           <img src="../../img/two 图标22.svg" />
         </li>
         <li id="off">
-          <audio ref="audio" :src="muiscList.url" autoplay></audio>
+          <audio ref="audio" :src="muiscList.url" autoplay loop></audio>
           <img @click="playHandle" v-if="play" src="../../img/two 图标23.svg" />
           <img @click="playHandle" v-else src="../../img/two 图标26.svg" />
         </li>
@@ -114,7 +114,6 @@ export default {
       } else {
         this.$refs.audio.play()
       }
-
       this.play = !this.play
     }
   },
@@ -130,7 +129,6 @@ export default {
       this.axios
         .get('http://localhost:3000/song/detail?ids=' + this.musicId)
         .then(res => {
-          console.log(res.data.songs[0])
           if (res.data.songs && res.data.songs.length > 0) {
             this.MusicDetails = res.data.songs[0]
           }
