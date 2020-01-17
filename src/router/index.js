@@ -68,57 +68,67 @@ const routes = [
     path: '/ranking',
     name: 'ranking',
     component: () => import('@/views/one/ranking.vue'),
-    children: [{
-      path: '/ranking_one',
-      name: 'ranking_one',
-      component: () => import('@/views/one/ranking_one.vue'),
-    },{
-      path: '/ranking_two',
-      name: 'ranking_two',
-      component: () => import('@/views/one/ranking_two.vue'),
-    },{
-      path: '/ranking_three',
-      name: 'ranking_three',
-      component: () => import('@/views/one/ranking_three.vue'),
-    }
-  ]
-  },{
+    children: [
+      {
+        path: '/ranking_one',
+        name: 'ranking_one',
+        component: () => import('@/views/one/ranking_one.vue')
+      },
+      {
+        path: '/ranking_two',
+        name: 'ranking_two',
+        component: () => import('@/views/one/ranking_two.vue')
+      },
+      {
+        path: '/ranking_three',
+        name: 'ranking_three',
+        component: () => import('@/views/one/ranking_three.vue')
+      }
+    ]
+  },
+  {
     //24小时榜
     path: '/one_time',
     name: 'one_time',
-    component: () => import('@/views/one/one_time.vue'),
-  },{
+    component: () => import('@/views/one/one_time.vue')
+  },
+  {
     //新人榜
     path: '/one_new',
     name: 'one_new',
-    component: () => import('@/views/one/one_new.vue'),
+    component: () => import('@/views/one/one_new.vue')
   },
   {
     //动态
     path: '/dynamichou',
     name: 'dynamichou',
-    component: () => import('@/views/four/module/dynamichou.vue'),
+    component: () => import('@/views/four/module/dynamichou.vue')
   },
   {
     //评论
     path: '/PL',
     name: 'PL',
     component: () => import('@/views/four/module/PL.vue'),
-    children: [{
-      path: '/soncomment',
-      name: 'soncomment',
-      component: () => import('@/views/four/module/soncomment.vue')
-    }, {
-      path: '/sontransmit',
-      name: 'sontransmit',
-      component: () => import('@/views/four/module/sontransmit.vue')
-    }, {
-      path: '/sonpraise',
-      name: 'sonpraise',
-      component: () => import('@/views/four/module/sonpraise.vue')
-    }],
+    children: [
+      {
+        path: '/soncomment',
+        name: 'soncomment',
+        component: () => import('@/views/four/module/soncomment.vue')
+      },
+      {
+        path: '/sontransmit',
+        name: 'sontransmit',
+        component: () => import('@/views/four/module/sontransmit.vue')
+      },
+      {
+        path: '/sonpraise',
+        name: 'sonpraise',
+        component: () => import('@/views/four/module/sonpraise.vue')
+      }
+    ],
     redirect: '/soncomment'
-  }, {
+  },
+  {
     path: '/*',
     redirect: '/index'
   }

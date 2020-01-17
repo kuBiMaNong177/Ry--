@@ -1,5 +1,8 @@
 <template>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> lzm
   <div class="naver">
     <div class="nav">
       <ul>
@@ -46,7 +49,10 @@
       </ul>
     </div>
     <!-- <div class="bofang">
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> lzm
 	<div class="naver">
 		<div class="nav">
 			<ul>
@@ -76,7 +82,10 @@
 			</ul>
 		</div>
 		<!-- <div class="bofang">
+<<<<<<< HEAD
 >>>>>>> f1d4f96c35fafa9d4cfce38bd3c9b1bfa191d8c5
+=======
+>>>>>>> lzm
 			<div class="datu">
 				<img src="https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4284518401,1515248953&fm=26&gp=0.jpg">
 				<p>#为喜欢的人做过的那些改变<br><span>xxx人参与</span></p>
@@ -201,6 +210,7 @@ export default {
 
 <style scoped>
 <<<<<<< HEAD
+<<<<<<< HEAD
 .nav {
   background-color: red;
   border-bottom: #eeeff0 0.25rem solid;
@@ -253,6 +263,8 @@ export default {
 }
 
 /* .dong .guanzhu {
+=======
+>>>>>>> lzm
 .nav {
   background-color: red;
   border-bottom: #eeeff0 0.25rem solid;
@@ -305,7 +317,10 @@ export default {
 }
 
 /* .dong .guanzhu {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> lzm
 	.nav {
 		background-color: red;
 		border-bottom: #eeeff0 0.25rem solid;
@@ -359,7 +374,10 @@ export default {
 	}
 
 	/* .dong .guanzhu {
+<<<<<<< HEAD
 >>>>>>> f1d4f96c35fafa9d4cfce38bd3c9b1bfa191d8c5
+=======
+>>>>>>> lzm
 		background: red;
 		border-radius: 0.875rem;
 		margin-left: 18.875rem;
@@ -370,6 +388,9 @@ export default {
 	}
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> lzm
 .dong h5 {
   margin-left: 3.75rem;
 }
@@ -395,7 +416,10 @@ export default {
 }
 
 /* .bofang {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> lzm
 	.dong h5 {
 		margin-left: 3.75rem;
 	}
@@ -423,13 +447,17 @@ export default {
 	.dong .audio span{font-size: 0.625rem;margin-left:4rem ;}
 	.dong ul {
 		/* margin-top: 0.625rem; */
-		padding: 1.25rem;
+/* padding: 1.25rem;
 		display: flex;
 		justify-content: space-around;
-	}
+	} */
 
+<<<<<<< HEAD
 	/* .bofang {
 >>>>>>> f1d4f96c35fafa9d4cfce38bd3c9b1bfa191d8c5
+=======
+/* .bofang {
+>>>>>>> lzm
 		width: 100%;
 		height: 11.25rem;
 		margin-top: 20rem;
