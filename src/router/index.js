@@ -68,6 +68,37 @@ const routes = [
     name: 'fons',
     component: () => import('@/views/four/module/fons.vue')
   },
+
+  {
+    //主播音乐电台排行榜
+    path: '/ranking',
+    name: 'ranking',
+    component: () => import('@/views/one/ranking.vue'),
+    children: [{
+      path: '/ranking_one',
+      name: 'ranking_one',
+      component: () => import('@/views/one/ranking_one.vue'),
+    },{
+      path: '/ranking_two',
+      name: 'ranking_two',
+      component: () => import('@/views/one/ranking_two.vue'),
+    },{
+      path: '/ranking_three',
+      name: 'ranking_three',
+      component: () => import('@/views/one/ranking_three.vue'),
+    }
+  ]
+  },{
+    //24小时榜
+    path: '/one_time',
+    name: 'one_time',
+    component: () => import('@/views/one/one_time.vue'),
+  },{
+    //新人榜
+    path: '/one_new',
+    name: 'one_new',
+    component: () => import('@/views/one/one_new.vue'),
+  },
   {
     //动态
     path: '/dynamichou',
@@ -83,19 +114,19 @@ const routes = [
       path: '/soncomment',
       name: 'soncomment',
       component: () => import('@/views/four/module/soncomment.vue')
-    },{
+    }, {
       path: '/sontransmit',
       name: 'sontransmit',
       component: () => import('@/views/four/module/sontransmit.vue')
-    },{
+    }, {
       path: '/sonpraise',
       name: 'sonpraise',
       component: () => import('@/views/four/module/sonpraise.vue')
     }],
-    redirect:'/soncomment'
-  },{
-    path:'/*',
-    redirect:'/index'
+    redirect: '/soncomment'
+  }, {
+    path: '/*',
+    redirect: '/index'
   }
 ]
 

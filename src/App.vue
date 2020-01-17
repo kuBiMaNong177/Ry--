@@ -1,6 +1,6 @@
 
 <template>
-  <keep-alive exclude="play">
+  <keep-alive>
     <router-view></router-view>
   </keep-alive>
 </template>

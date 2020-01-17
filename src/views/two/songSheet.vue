@@ -116,7 +116,7 @@ export default {
   components: {
     Footer
   },
-  created() {
+  activated() {
     // activated created
     this.id = this.$route.query.id
     this.axios

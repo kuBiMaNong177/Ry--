@@ -65,7 +65,7 @@
 </script>
 
 
-<style>
+<style scope>
 	.header {
 		height: 1.75rem;
 		width: 100%;
