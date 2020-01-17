@@ -9,7 +9,12 @@
         </div>
       </div>
       <!-- v-if="this.$cookies.get('token')" -->
-      <div   class="wrapper_276">
+      <div class="ppp_pp"  v-if="!this.$cookies.get('token')">
+        <p class="ppp1">登陆网易云音乐</p>
+        <p class="ppp2">手机电脑多端同步，尽享海量高品质音乐</p>
+        <button class="pppbtn" @click="bttnn">立即登录</button>
+      </div>
+      <div  v-if="this.$cookies.get('token')"  class="wrapper_276">
         <div class="box_border">
           <img :src="img" alt="">
         </div>
@@ -140,6 +145,9 @@ export default {
       });
         }
       })
+    },
+    bttnn(){
+      location.href="http://localhost:8080/#/denglu"
     }
   },
 };
@@ -148,6 +156,27 @@ export default {
 </script>
 
 <style scoped>
+.ppp_pp{
+  width:100%;
+  height:9rem;
+}
+.ppp1{
+  text-align: center;
+  line-height:3
+}
+.ppp2{
+  text-align: center
+}
+.pppbtn{
+  width:80%;
+  height:2.5rem;
+  border-radius:30px;
+  margin-top:20px;
+  margin-left:10%;
+  border:none;
+  border:1px solid #CCCCCC;
+  background:white
+}
 * {
   margin: 0;
   padding: 0;
