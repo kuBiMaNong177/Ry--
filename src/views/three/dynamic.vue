@@ -220,6 +220,59 @@ export default {
 }
 
 /* .dong .guanzhu {
+	.nav {
+		background-color: red;
+		border-bottom: #eeeff0 0.25rem solid;
+	}
+
+	.nav>ul {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.nav>ul>li>span {
+		color: white;
+		line-height: 1.5rem;
+	}
+
+	.nav>ul>li>a>img {
+		width: 24px;
+		height: 24px;
+		display: inline;
+
+	}
+
+	.dong {
+		float: left;
+		background: white;
+		width: 100%;
+		min-height: 20rem;
+		position: relative;
+	}
+
+	.dong .box img {
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 50%;
+		background: pink;
+		margin: 0.625rem 0 0 0.625rem;
+	}
+
+	.dong p {
+		font-size: 0.875rem;
+		margin: -2.25rem 0 0 3.75rem;
+	}
+
+	.dong p>span {
+		margin-left: 1.25rem;
+	}
+
+	.dong h6 {
+		margin-left: 3.75rem;
+		margin-top: 0.125rem;
+	}
+
+	/* .dong .guanzhu {
 		background: red;
 		border-radius: 0.875rem;
 		margin-left: 18.875rem;

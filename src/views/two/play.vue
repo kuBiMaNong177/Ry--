@@ -28,7 +28,7 @@
           <img src="../../img/two 图标17.svg" />
         </li>
         <li>
-          <img src="../../img/two 图标18.svg" />
+          <img @click="downLoad" src="../../img/two 图标18.svg" />
         </li>
         <li>
           <img @click="runSong" src="../../img/two 图标19.svg" />
@@ -92,6 +92,16 @@ export default {
     }
   },
   methods: {
+    //点击下载
+    downLoad() {
+      let id = localStorage.getItem('id')
+      this.axios.get('http://localhost:3000/song/url?id=' + id).then(res => {
+        // console.log(res.data.data);
+        if (res.data.data[0].url) {
+          open(res.data.data[0].url)
+        }
+      })
+    },
     runSong() {
       //点击这个点击事件拿id，传参，另一种query传参
       this.$router.push({
@@ -118,23 +128,35 @@ export default {
     }
   },
   created() {
-    //从localStorage里面拿id，赋值给musicId，让axios使用
+    //从localStorage里面拿id， 赋值给musicId，让axios使用
     this.musicId = localStorage.getItem('id')
 
+    // console.log(this.$route.query);
+    this.musicId2 = this.$route.query.musicId
+
     this.axios
-      .get('http://localhost:3000/song/url?id=' + this.musicId)
+      .get(
+        'http://localhost:3000/song/url?id=' +
+          (this.musicId2 ? this.musicId2 : this.musicId)
+      )
       .then(res => {
         this.muiscList = res.data.data[0]
       }),
       this.axios
-        .get('http://localhost:3000/song/detail?ids=' + this.musicId)
+        .get(
+          'http://localhost:3000/song/detail?ids=' +
+            (this.musicId2 ? this.musicId2 : this.musicId)
+        )
         .then(res => {
           if (res.data.songs && res.data.songs.length > 0) {
             this.MusicDetails = res.data.songs[0]
           }
         }),
       this.axios
-        .get('http://localhost:3000/lyric?id=' + this.musicId)
+        .get(
+          'http://localhost:3000/lyric?id=' +
+            (this.musicId2 ? this.musicId2 : this.musicId)
+        )
         .then(res => {
           let arr = res.data.lrc.lyric
             .replace(/[(\d)*]/g, '')
@@ -213,7 +235,26 @@ export default {
   margin: 7rem auto;
   border: solid 2.5rem #000000;
   border-radius: 50%;
+  animation: haha1 19s linear infinite;
 }
+@keyframes haha1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
 .play > img {
   width: 10.5rem;
   height: 10.5rem;

@@ -58,7 +58,9 @@ export default {
   },
   methods: {
     btns() {
-      history.go(-1);
+      // history.go(-1);
+      // location.href='dynamichou.vue'
+      window.history.go(-1);
     },
     bttn(){
 

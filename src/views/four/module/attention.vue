@@ -14,7 +14,7 @@
         <li class="li_big" v-for="(item, index) in list" :key="item.id">
           <img :src="item.avatarUrl" />
           <p class="li_span" ref="ppp">{{ item.nickname }}</p>
-          <p class="li_span1">{{ item.signature }}</p>
+         <p class="li_span1">{{ item.signature }}</p>
           <van-button class="btnss" type="primary" @click="alertMenu(index)">...</van-button>
         </li>
       </ul>

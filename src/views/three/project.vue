@@ -6,9 +6,14 @@
 					<router-link to='dynamic'><img src="@/img/图标317.png"></router-link>
 				</li>
 				<li><span>发动态</span></li>
-				<li>发表</li>
+				<li><van-cell is-link @click="showPopup">发表</van-cell></li>
 			</ul>
 		</div>
+		<van-popup
+		  v-model="show"
+		  position="top"
+		  :style="{ height: '20%' }"
+		/>
 		<van-cell-group>
 			<van-field v-model="message" rows="1" autosize type="textarea" placeholder="一起聊聊吧~" maxlength="140" show-word-limit />
 		</van-cell-group>
@@ -37,30 +42,32 @@
 
 <script>
 	import Vue from 'vue';
-	import {
-		Field
-	} from 'vant';
-	import {
-		Uploader
-	} from 'vant';
+	import { Popup } from 'vant';
+	import { Field } from 'vant';
+	import {	Uploader } from 'vant';
 	Vue.use(Field);
 	Vue.use(Uploader);
+	Vue.use(Popup);
 	export default {
 		data() {
 			return {
-				message: ''
+				message: '',
+				show: false
 			};
 		},
 		methods: {
 			afterRead(file) {
 				// 此时可以自行将文件上传至服务器
 				console.log(file);
+			},
+			showPopup() {
+			this.show = true;
 			}
 		}
 	}
 </script>
 
-<style>
+<style scoped>
 	.header {
 		width: 100%;
 		height: 2.5rem;

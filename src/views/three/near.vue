@@ -38,7 +38,7 @@
 <script>
 </script>
 
-<style>
+<style scoped>
 	.naver {
 		background: #eeeff0;
 	}

@@ -6,7 +6,7 @@
     </header>
     <div v-for="item in mvItem" :key="item.id" class="content">
         <div class="vadio">
-         <video width="100%" controls :src="mvItem[0].brs[480]" autoplay="autoplay"></video>
+         <video width="100%" height="100%" controls :src="mvItem[0].brs[480]" autoplay="autoplay"></video>
         </div>
         <div class="con-t">
           <div class="con-tit">
@@ -62,15 +62,13 @@ export default {
       siMv:[]
     }
   },
-  created() {
-    // console.log(this.$route.query.id);
-
+  activated() {
     this.axios
       .get('http://localhost:3000/mv/detail?mvid=' + this.$route.query.id)
       .then(res => {
         // console.log(res.data.data);
-        this.mvItem.push(res.data.data)
-        console.log(this.mvItem);
+        this.mvItem=[res.data.data]
+        // console.log(this.mvItem);
 
         axios.get('http://localhost:3000/simi/mv?mvid='+this.$route.query.id)
         .then(res=>{

@@ -45,6 +45,11 @@ const routes = [
     component: () => import('@/views/four/twoluyou/enroll.vue')
   },
   {
+    path: "/play",
+    name: "PLAY",
+    component: () => import("@/views/two/play.vue")
+  },
+  {
     //关注
     path: '/attention',
     name: 'attention',
@@ -65,42 +70,38 @@ const routes = [
   },
   {
     //动态
-    path: '/dynamic',
-    name: 'dynamic',
-    component: () => import('@/views/four/module/dynamic.vue')
+    path: '/dynamichou',
+    name: 'dynamichou',
+    component: () => import('@/views/four/module/dynamichou.vue'),
   },
+		//播放
+	{
+	  path: "/play",
+	  name: "PLAY",
+	  component: () => import("@/views/two/play.vue")
+	},
   {
     //评论
     path: '/PL',
     name: 'PL',
     component: () => import('@/views/four/module/PL.vue'),
-    children: [
-      {
-        path: '/soncomment',
-        name: 'soncomment',
-        component: () => import('@/views/four/module/soncomment.vue')
-      },
-      {
-        path: '/sontransmit',
-        name: 'sontransmit',
-        component: () => import('@/views/four/module/sontransmit.vue')
-      },
-      {
-        path: '/sonpraise',
-        name: 'sonpraise',
-        component: () => import('@/views/four/module/sonpraise.vue')
-      },
-      {
-        path: '/play',
-        name: 'PLAY',
-        component: () => import('@/views/two/play.vue')
-      }
-    ],
-    redirect: '/soncomment'
-  },
-  {
-    path: '/*',
-    redirect: '/index'
+    children: [{
+      path: '/soncomment',
+      name: 'soncomment',
+      component: () => import('@/views/four/module/soncomment.vue')
+    },{
+      path: '/sontransmit',
+      name: 'sontransmit',
+      component: () => import('@/views/four/module/sontransmit.vue')
+    },{
+      path: '/sonpraise',
+      name: 'sonpraise',
+      component: () => import('@/views/four/module/sonpraise.vue')
+    }],
+    redirect:'/soncomment'
+  },{
+    path:'/*',
+    redirect:'/index'
   }
 ]
 
