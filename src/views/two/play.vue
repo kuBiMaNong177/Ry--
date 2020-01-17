@@ -3,14 +3,14 @@
     <Header class="top">
       <ul class="topContent">
         <li>
-          <img @click="moveBack()" src="../../img/two 图标7.png" />
+          <img @click="moveBack()" src="../../img/two 7.png" />
         </li>
         <li>
           <p>{{MusicDetails.name}}</p>
           <span>{{MusicDetails.ar[0].name}}</span>
         </li>
         <li>
-          <img src="../../img/two 图标12.png" />
+          <img src="../../img/two 12.png" />
         </li>
       </ul>
     </Header>
@@ -25,16 +25,16 @@
     <div class="share">
       <ul>
         <li>
-          <img src="../../img/two 图标17.svg" />
+          <img src="../../img/two 17.svg" />
         </li>
         <li>
-          <img @click="downLoad" src="../../img/two 图标18.svg" />
+          <img @click="downLoad" src="../../img/two 18.svg" />
         </li>
         <li>
-          <img @click="runSong" src="../../img/two 图标19.svg" />
+          <img @click="runSong" src="../../img/two 19.svg" />
         </li>
         <li>
-          <img src="../../img/two 图标20.svg" />
+          <img src="../../img/two 20.svg" />
         </li>
       </ul>
     </div>
@@ -48,21 +48,21 @@
       </div>
       <ul class="suspend">
         <li>
-          <img src="../../img/two 图标21.svg" />
+          <img src="../../img/two 21.svg" />
         </li>
         <li>
-          <img src="../../img/two 图标22.svg" />
+          <img src="../../img/two 22.svg" />
         </li>
         <li id="off">
           <audio ref="audio" :src="muiscList.url" autoplay loop></audio>
-          <img @click="playHandle" v-if="play" src="../../img/two 图标23.svg" />
-          <img @click="playHandle" v-else src="../../img/two 图标26.svg" />
+          <img @click="playHandle" v-if="play" src="../../img/two 23.svg" />
+          <img @click="playHandle" v-else src="../../img/two 26.svg" />
         </li>
         <li>
-          <img src="../../img/two 图标24.svg" />
+          <img src="../../img/two 24.svg" />
         </li>
         <li>
-          <img src="../../img/two 图标25.svg" />
+          <img src="../../img/two 25.svg" />
         </li>
       </ul>
     </footer>

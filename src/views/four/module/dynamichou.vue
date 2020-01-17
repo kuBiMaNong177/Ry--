@@ -4,7 +4,7 @@
       <div class="header">
         <span class="header_span" @click="btns">〈</span>
         <span class="header_span1">动态</span>
-        <img src="../../../img/two 图标1.jpg" />
+        <img src="../../../img/two 1.jpg" />
       </div>
     </div>
 
@@ -20,8 +20,7 @@
         <img class="json_img" :src="JSON.parse(item.json).song.album.blurPicUrl" />
         <p class="json_p">{{JSON.parse(item.json).song.name}}</p>
         <p class="json_p1">{{JSON.parse(item.json).song.artists[0].name}}</p>
-        <div>
-        </div>
+        <div></div>
       </div>
       <ul class="dynamic_ul">
         <li class="nnn1" @click="bbq(item.id)">
@@ -42,7 +41,7 @@
         </li>
       </ul>
     </div>
-    <audio class="aaaa" id="music" :src="listmic.url"  autoplay></audio>
+    <audio class="aaaa" id="music" :src="listmic.url" autoplay></audio>
     <div class="footer_fot">
       <Footer></Footer>
     </div>
@@ -72,18 +71,26 @@ export default {
     btns() {
       history.go(-1)
     },
-    bbq(id){
+    bbq(id) {
       // console.log(id)
-      let token=this.$cookies.get('token')
+      let token = this.$cookies.get('token')
       console.log(token)
-      this.axios.get('http://localhost:3000/event/forward?evId='+id+"&uid="+this.$cookies.get('id')+"&forwards=111",{
-        headers:{
-          'Authorization': 'Bearer ' + token,
-        }
-      })
-      .then(res=>{
-        console.log(res)
-      })
+      this.axios
+        .get(
+          'http://localhost:3000/event/forward?evId=' +
+            id +
+            '&uid=' +
+            this.$cookies.get('id') +
+            '&forwards=111',
+          {
+            headers: {
+              Authorization: 'Bearer ' + token
+            }
+          }
+        )
+        .then(res => {
+          console.log(res)
+        })
     },
     dzbtn(id) {
       this.axios
@@ -183,7 +190,7 @@ export default {
   line-height: 2.3;
   color: white;
   font-size: 20px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .middle {
@@ -247,7 +254,7 @@ export default {
   height: 2.5rem;
   background: #f1f3f2;
   margin-left: 20%;
-  cursor:pointer;
+  cursor: pointer;
 }
 .json_p {
   font-size: 12px;
@@ -272,11 +279,11 @@ export default {
 .aaaa {
   width: 120px;
 }
-.nnn1{
-  cursor:pointer;
+.nnn1 {
+  cursor: pointer;
 }
-.app{
-  cursor:pointer;
+.app {
+  cursor: pointer;
 }
 </style>
 "{"msg":"测试第二次","song":{"name":"那女孩对我说 (完整版)","id":1372796676,

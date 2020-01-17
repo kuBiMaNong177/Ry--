@@ -4,7 +4,7 @@
       <div class="header">
         <span class="header_span" @click="btns">〈</span>
         <span class="header_span1">主播电台排行榜</span>
-        <img src="../../img/two 图标1.jpg" />
+        <img src="../../img/two 1.jpg" />
       </div>
     </div>
     <ul class="ranking_ul">
@@ -101,6 +101,6 @@ export default {
 }
 .router-link-active {
   border-bottom: 3px solid white;
-  border-radius:20% 20%
+  border-radius: 20% 20%;
 }
 </style>

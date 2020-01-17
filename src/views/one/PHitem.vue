@@ -4,13 +4,13 @@
     <Header class="top">
       <ul class="topContent">
         <li>
-          <img @click="moveBack()" src="../../img/two 图标7.png" />
+          <img @click="moveBack()" src="../../img/two 7.png" />
         </li>
         <li>
           <p>排行榜</p>
         </li>
         <li>
-          <img src="../../img/two 图标8.png" />
+          <img src="../../img/two 8.png" />
         </li>
       </ul>
     </Header>
@@ -19,7 +19,7 @@
       <div class="songSheet">
         <dl>
           <dt>
-            <img src="" ref="img" />
+            <img src ref="img" />
           </dt>
           <dd style="width:17.25rem;height:2.81rem;float:right;margin-top: 0.63rem">
             <p style="color:rgba(255, 255, 255, 1);line-height:2.81rem">{{songSheetList.name}}</p>
@@ -38,19 +38,19 @@
         <div class="share">
           <ul class="icon">
             <li>
-              <img src="../../img/two 图标10.png" />
+              <img src="../../img/two 10.png" />
               <em>收藏</em>
             </li>
             <li>
-              <img src="../../img/two 图标11.png" />
+              <img src="../../img/two 11.png" />
               <em>评论</em>
             </li>
             <li>
-              <img src="../../img/two 图标12.png" />
+              <img src="../../img/two 12.png" />
               <em>分享</em>
             </li>
             <li>
-              <img src="../../img/two 图标13.png" />
+              <img src="../../img/two 13.png" />
               <em>下载</em>
             </li>
           </ul>
@@ -59,7 +59,7 @@
       <!-- 播放 -->
       <div class="Song">
         <div class="play">
-          <img src="../../img/two 图标14.svg" alt />
+          <img src="../../img/two 14.svg" alt />
           <p>播放全部</p>
         </div>
         <router-link
@@ -77,8 +77,8 @@
                 <span>{{item.ar[0].name}}</span>
               </div>
               <div>
-                <img src="../../img/two 图标15.svg" />
-                <img src="../../img/two 图标16.svg" />
+                <img src="../../img/two 15.svg" />
+                <img src="../../img/two 16.svg" />
               </div>
             </li>
           </ul>
@@ -117,17 +117,16 @@ export default {
     Footer
   },
   activated() {
-   let num = this.$route.query.num
+    let num = this.$route.query.num
 
-    this.axios.get('http://localhost:3000/top/list?idx=' + num).then(res=>{
+    this.axios.get('http://localhost:3000/top/list?idx=' + num).then(res => {
       // console.log(res.data.playlist);
       this.$refs.img.src = res.data.playlist.coverImgUrl
       this.privilegesList = res.data.playlist.tracks
     })
   },
-  destroyed(){
-    console.log('组件销毁');
-
+  destroyed() {
+    console.log('组件销毁')
   }
 }
 </script>

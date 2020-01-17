@@ -11,7 +11,7 @@
         </li>
         <li>
           <router-link to="/play">
-            <img src="../../img/two 图标1.jpg" />
+            <img src="../../img/two 1.jpg" />
           </router-link>
         </li>
       </ul>
@@ -23,7 +23,7 @@
         <ul class="sonNav">
           <li>
             <div>
-              <img src="../../img/two 图标2.png" />
+              <img src="../../img/two 2.png" />
               <span>本地音乐</span>
             </div>
 
@@ -33,7 +33,7 @@
           </li>
           <li>
             <div>
-              <img src="../../img/two 图标3.png" />
+              <img src="../../img/two 3.png" />
               <span>最近播放</span>
             </div>
 
@@ -43,7 +43,7 @@
           </li>
           <li>
             <div>
-              <img src="../../img/two 图标4.png" />
+              <img src="../../img/two 4.png" />
               <span>我的电台</span>
             </div>
 
@@ -53,7 +53,7 @@
           </li>
           <li>
             <div>
-              <img src="../../img/two 图标5.png" />
+              <img src="../../img/two 5.png" />
               <span>我的收藏</span>
             </div>
 

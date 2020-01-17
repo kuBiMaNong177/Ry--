@@ -3,13 +3,13 @@
     <Header class="top">
       <ul class="topContent">
         <li>
-          <img @click="moveBack()" src="../../img/two 图标7.png" />
+          <img @click="moveBack()" src="../../img/two 7.png" />
         </li>
         <li>
           <p>评论（{{content.length}}）</p>
         </li>
         <li>
-          <img src="../../img/two 图标12.png" />
+          <img src="../../img/two 12.png" />
         </li>
       </ul>
     </Header>
@@ -40,7 +40,7 @@
         </div>
         <div class="stick">
           <p>10万</p>
-          <img src="../../img/two 图标27.svg" alt />
+          <img src="../../img/two 27.svg" alt />
         </div>
       </div>
     </div>

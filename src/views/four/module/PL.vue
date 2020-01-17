@@ -4,17 +4,16 @@
       <div class="header">
         <span class="header_span" @click="btns">〈</span>
         <span class="header_span1">动态</span>
-        <img src="../../../img/two 图标1.jpg" />
+        <img src="../../../img/two 1.jpg" />
       </div>
     </div>
 
     <div class="middle">
-
-      <img class="middle_img" :src=img alt />
+      <img class="middle_img" :src="img" alt />
       <p class="middle_p">{{cookies}}</p>
       <p class="middle_color">{{Number(this.add)|dateFormat}}</p>
       <p class="middle_p1">{{this.wz}}</p>
-      <img class="dynamic_img" :src="this.paa" alt="">
+      <img class="dynamic_img" :src="this.paa" alt />
       <ul class="middle_ul">
         <router-link :to="{name:'soncomment',query:{id:this.pdd}}">
           <li>评论</li>
@@ -29,58 +28,50 @@
       <router-view></router-view>
     </div>
     <div class="footer_fot">
-      <input ref="ppp"    type="text" placeholder="发表评论">
-      <img src="../../../images/DZ.png" alt="">
-      <img @click="bttn" src="../../../images/ZW.png" alt="">
+      <input ref="ppp" type="text" placeholder="发表评论" />
+      <img src="../../../images/DZ.png" alt />
+      <img @click="bttn" src="../../../images/ZW.png" alt />
     </div>
-
   </div>
 </template>
 
 <script>
-import Footer from "@/components/footer/index.vue";
+import Footer from '@/components/footer/index.vue'
 import child from '../module/soncomment'
 export default {
-    name: "Four",
-    components: {
-
-  },
+  name: 'Four',
+  components: {},
   data() {
     return {
       list: [],
-      img: this.$cookies.get("avatarUrl"),
-      cookies:"",
-      add:'',
-      paa:'',
-      wz:'',
-      pdd:'',
-    };
+      img: this.$cookies.get('avatarUrl'),
+      cookies: '',
+      add: '',
+      paa: '',
+      wz: '',
+      pdd: ''
+    }
   },
   methods: {
     btns() {
       // history.go(-1);
       // location.href='dynamichou.vue'
-      window.history.go(-1);
+      window.history.go(-1)
     },
-    bttn(){
-
-    }
+    bttn() {}
   },
   activated() {
-      this.cookies=this.$cookies.get('nickname')
+    this.cookies = this.$cookies.get('nickname')
     //  this.$cookies.get('nickname')
-      // let that = this;
+    // let that = this;
 
-      this.pdd=this.$route.query.id
-      this.add=this.$route.query.time
-      this.paa=this.$route.query.img
-      this.wz=this.$route.query.wz
-      // console.log(this.add)
-
-
-
+    this.pdd = this.$route.query.id
+    this.add = this.$route.query.time
+    this.paa = this.$route.query.img
+    this.wz = this.$route.query.wz
+    // console.log(this.add)
   }
-};
+}
 </script>
 
 <style scoped>
@@ -89,7 +80,7 @@ export default {
   padding: 0;
 }
 .main {
-  height:100%;
+  height: 100%;
 }
 .header_fu {
   width: 100%;
@@ -120,30 +111,31 @@ export default {
   line-height: 2.3;
   color: white;
   font-size: 20px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-.footer_fot{
-    width:100%;
-    height:3rem;
-    /* background: #d33a31; */
-    position:fixed;bottom:0px;
-    display:flex;
-    justify-content:space-around;
-    border-top:1px solid #CCCCCC
+.footer_fot {
+  width: 100%;
+  height: 3rem;
+  /* background: #d33a31; */
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #cccccc;
 }
-.footer_fot input{
-    width:15rem;
-    height:2rem;
-    border-radius:50px 50px;
-    margin-top:6px;
-    border: none;
-    border:1px solid #CCCCCC;
+.footer_fot input {
+  width: 15rem;
+  height: 2rem;
+  border-radius: 50px 50px;
+  margin-top: 6px;
+  border: none;
+  border: 1px solid #cccccc;
 }
-.footer_fot img{
-    width:25px;
-    height:25px;
-    margin-top:13px;
+.footer_fot img {
+  width: 25px;
+  height: 25px;
+  margin-top: 13px;
 }
 .middle {
   width: 100%;
@@ -166,19 +158,19 @@ export default {
   width: 10rem;
   height: 15rem;
   margin-top: 2%;
-  margin-left:20%
+  margin-left: 20%;
   /* position:absolute;
   left:6%;
   margin-top:30px */
 }
-.middle_color{
-  font-size:14px;
-  color:#ccc;
-  line-height:2
+.middle_color {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 2;
 }
-.middle_ul{
-  display:flex;
-  justify-content:space-around;
-  margin-top:30px;
+.middle_ul {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
 }
 </style>

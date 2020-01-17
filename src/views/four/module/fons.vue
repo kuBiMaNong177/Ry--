@@ -4,7 +4,7 @@
       <div class="header">
         <span class="header_span" @click="btns">〈</span>
         <span class="header_span1">粉丝</span>
-        <img src="../../../img/two 图标1.jpg" />
+        <img src="../../../img/two 1.jpg" />
       </div>
     </div>
     <div>
@@ -110,7 +110,7 @@ export default {
   line-height: 2.3;
   color: white;
   font-size: 20px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .li_big {
@@ -133,7 +133,6 @@ export default {
   position: absolute;
   left: 110px;
   top: 26px;
-
 }
 .li_span1 {
   margin-left: 200px;

@@ -5,7 +5,7 @@
         <div class="header">
           <span></span>
           <span>账号</span>
-          <img src="../../img/two 图标1.jpg" />
+          <img src="../../img/two 1.jpg" />
         </div>
       </div>
       <!-- v-if="this.$cookies.get('token')" -->

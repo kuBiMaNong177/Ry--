@@ -4,13 +4,13 @@
       <ul>
         <li>
           <router-link to="project">
-            <img src="@/img/图标304.png" />
+            <img src="@/img/tb304.png" />
             <span>发动态</span>
           </router-link>
         </li>
         <li>
           <router-link to="project">
-            <img src="@/img/图标305.png" />
+            <img src="@/img/tb305.png" />
             <span>发短视频</span>
           </router-link>
         </li>
@@ -31,15 +31,15 @@
       </div>
       <ul>
         <li>
-          <img @click="item.info.likedCount++" src="@/img/图标306.png" />
+          <img @click="item.info.likedCount++" src="@/img/tb306.png" />
           {{item.info.likedCount}}
         </li>
         <li>
-          <img src="@/img/图标307.png" />
+          <img src="@/img/tb307.png" />
           {{item.info.commentCount}}
         </li>
         <li>
-          <img src="@/img/图标308.png" />
+          <img src="@/img/tb308.png" />
           <router-link to="project">转发</router-link>
         </li>
       </ul>
@@ -49,8 +49,8 @@
 	<div class="naver">
 		<div class="nav">
 			<ul>
-				<li><router-link to='project'><img src="@/img/图标304.png"><span>发动态</span></router-link></li>
-				<li><router-link to='project'><img src="@/img/图标305.png"><span>发短视频</span></router-link></li>
+				<li><router-link to='project'><img src="@/img/tb304.png"><span>发动态</span></router-link></li>
+				<li><router-link to='project'><img src="@/img/tb305.png"><span>发短视频</span></router-link></li>
 			</ul>
 		</div>
 		<div class="dong" v-for="(item,id) in list" :key="item.id">
@@ -69,9 +69,9 @@
 				<span>{{JSON.parse(item.json).song.artists[0].name}}</span>
 			</div>
 			<ul>
-				<li><img @click="item.info.likedCount++" src="@/img/图标306.png">{{item.info.likedCount}}</li>
-				<li><img src="@/img/图标307.png">{{item.info.commentCount}}</li>
-				<li><img src="@/img/图标308.png"><router-link to='project'>转发</router-link></li>
+				<li><img @click="item.info.likedCount++" src="@/img/tb306.png">{{item.info.likedCount}}</li>
+				<li><img src="@/img/tb307.png">{{item.info.commentCount}}</li>
+				<li><img src="@/img/tb308.png"><router-link to='project'>转发</router-link></li>
 			</ul>
 		</div>
 		<div class="bofang">
@@ -93,9 +93,9 @@
       <h5>#歌单推荐#仿佛看完了好几场演唱会</h5>
       <div class="box1">
         <h4>@云音乐歌单之友 分享歌单：您的假期余额仅剩半天，想嗨请从速！</h4>
-        <img src="../../img/图片303.png" />
+        <img src="../../img/tb303.png" />
         <div class="box2">
-          <img src="../../img/图片303.png" />
+          <img src="../../img/tb303.png" />
           <h3>
             那些惊艳嗨翻天的华语现场...
             <br />
@@ -105,13 +105,13 @@
       </div>
       <ul>
         <li>
-          <img src="@/img/图标306.png" />26
+          <img src="@/img/tb306.png" />26
         </li>
         <li>
-          <img src="@/img/图标307.png" />26
+          <img src="@/img/tb307.png" />26
         </li>
         <li>
-          <img src="@/img/图标308.png" />转发
+          <img src="@/img/tb308.png" />转发
         </li>
       </ul>
     </div>
@@ -119,13 +119,13 @@
       <h2>热门话题&nbsp;&gt;</h2>
       <ul>
         <li>
-          <img src="@/img/图片309.png" />
+          <img src="@/img/tb309.png" />
         </li>
         <li>
-          <img src="@/img/图片310.png" />
+          <img src="@/img/tb310.png" />
         </li>
         <li>
-          <img src="@/img/图片311.png" />
+          <img src="@/img/tb311.png" />
         </li>
       </ul>
     </div>
@@ -143,20 +143,20 @@
       <div class="box1">
         <ul>
           <li>
-            <img src="@/img/图片312.png" />
+            <img src="@/img/tb312.png" />
           </li>
           <li>
-            <img src="@/img/图片312.png" />
+            <img src="@/img/tb312.png" />
           </li>
           <li>
-            <img src="@/img/图片312.png" />
+            <img src="@/img/tb312.png" />
           </li>
           <li>
-            <img src="@/img/图片312.png" />
+            <img src="@/img/tb312.png" />
           </li>
         </ul>
         <div class="box2">
-          <img src="../../img/图片303.png" />
+          <img src="../../img/tb303.png" />
           <h3>
             那些惊艳嗨翻天的华语现场...
             <br />
@@ -166,13 +166,13 @@
       </div>
       <ul>
         <li>
-          <img src="@/img/图标306.png" />26
+          <img src="@/img/tb306.png" />26
         </li>
         <li>
-          <img src="@/img/图标307.png" />26
+          <img src="@/img/tb307.png" />26
         </li>
         <li>
-          <img src="@/img/图标308.png" />转发
+          <img src="@/img/tb308.png" />转发
         </li>
       </ul>
     </div>
