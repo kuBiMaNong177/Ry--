@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="naver">
     <div class="nav">
       <ul>
@@ -45,6 +46,37 @@
       </ul>
     </div>
     <!-- <div class="bofang">
+=======
+	<div class="naver">
+		<div class="nav">
+			<ul>
+				<li><router-link to='project'><img src="@/img/图标304.png"><span>发动态</span></router-link></li>
+				<li><router-link to='project'><img src="@/img/图标305.png"><span>发短视频</span></router-link></li>
+			</ul>
+		</div>
+		<div class="dong" v-for="(item,id) in list" :key="item.id">
+			<div class="box">
+				<img :src="item.user.avatarUrl">
+			</div>
+			<p>{{item.user.nickname}}<span>发布了：</span></p>
+			<h6>{{item.showTime | dateFormat}}</h6>
+			<h5>{{JSON.parse(item.json).msg}}</h5>
+			<div class="box1">
+				<img :src="item.pics[0].rectangleUrl">
+			</div>
+			<div class="audio">
+				<img :src="JSON.parse(item.json).song.album.picUrl">
+				<p>{{JSON.parse(item.json).song.name}}</p>
+				<span>{{JSON.parse(item.json).song.artists[0].name}}</span>
+			</div>
+			<ul>
+				<li><img @click="item.info.likedCount++" src="@/img/图标306.png">{{item.info.likedCount}}</li>
+				<li><img src="@/img/图标307.png">{{item.info.commentCount}}</li>
+				<li><img src="@/img/图标308.png"><router-link to='project'>转发</router-link></li>
+			</ul>
+		</div>
+		<!-- <div class="bofang">
+>>>>>>> f1d4f96c35fafa9d4cfce38bd3c9b1bfa191d8c5
 			<div class="datu">
 				<img src="https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4284518401,1515248953&fm=26&gp=0.jpg">
 				<p>#为喜欢的人做过的那些改变<br><span>xxx人参与</span></p>
@@ -168,6 +200,7 @@ export default {
 </script>
 
 <style scoped>
+<<<<<<< HEAD
 .nav {
   background-color: red;
   border-bottom: #eeeff0 0.25rem solid;
@@ -272,6 +305,61 @@ export default {
 }
 
 /* .dong .guanzhu {
+=======
+	.nav {
+		background-color: red;
+		border-bottom: #eeeff0 0.25rem solid;
+	}
+
+	.nav>ul {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.nav>ul>li>a>span {
+		color: white;
+		line-height: 1.5rem;
+	}
+
+	.nav>ul>li>a>img {
+		width: 24px;
+		height: 24px;
+		display: inline;
+
+	}
+
+	.dong {
+		float: left;
+		background: white;
+		width: 100%;
+		min-height: 20rem;
+		position: relative;
+	}
+
+	.dong .box img {
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 50%;
+		background: pink;
+		margin: 0.625rem 0 0 0.625rem;
+	}
+
+	.dong p {
+		font-size: 0.875rem;
+		margin: -2.25rem 0 0 3.75rem;
+	}
+
+	.dong p>span {
+		margin-left: 1.25rem;
+	}
+
+	.dong h6 {
+		margin-left: 3.75rem;
+		margin-top: 0.125rem;
+	}
+
+	/* .dong .guanzhu {
+>>>>>>> f1d4f96c35fafa9d4cfce38bd3c9b1bfa191d8c5
 		background: red;
 		border-radius: 0.875rem;
 		margin-left: 18.875rem;
@@ -281,6 +369,7 @@ export default {
 		top: 0.875rem;
 	}
  */
+<<<<<<< HEAD
 .dong h5 {
   margin-left: 3.75rem;
 }
@@ -306,6 +395,41 @@ export default {
 }
 
 /* .bofang {
+=======
+	.dong h5 {
+		margin-left: 3.75rem;
+	}
+
+	.dong .box1 img {
+		width: 15.625rem;
+		height: 9.375rem;
+		background: rgba(217, 217, 217, 1);
+		margin-left: 3.75rem;
+	}
+
+	.dong ul>li>img {
+		width: 0.875rem;
+		height: 0.875rem;
+		display: inline;
+	}
+	.dong .audio{
+		width: 60.5%;
+		height: 2.5rem;
+		background: #f1f3f2;
+		margin-left: 14.5%;
+		cursor:pointer;}
+	.dong .audio img{width: 2.5rem;height: 2.5rem;display: inline;}
+	.dong .audio p{font-size: 0.75rem;margin-top: -2.55rem;}
+	.dong .audio span{font-size: 0.625rem;margin-left:4rem ;}
+	.dong ul {
+		/* margin-top: 0.625rem; */
+		padding: 1.25rem;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	/* .bofang {
+>>>>>>> f1d4f96c35fafa9d4cfce38bd3c9b1bfa191d8c5
 		width: 100%;
 		height: 11.25rem;
 		margin-top: 20rem;

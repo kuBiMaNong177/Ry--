@@ -7,10 +7,10 @@
 		</div>
 		<div class="nearby">
 			<ul>
-				<li><img src="../../img/图标313.png"></li>
-				<li><img src="../../img/图标314.png"></li>
-				<li><img src="../../img/图标315.png"></li>
-				<li><img src="../../img/图标316.png"></li>
+				<li><router-link to='mxyh'><img src="../../img/图标313.png"></router-link></li>
+				<li><router-link to='mxyh'><img src="../../img/图标314.png"></router-link></li>
+				<li><router-link to='mxyh'><img src="../../img/图标315.png"></router-link></li>
+				<li><router-link to='mxyh'><img src="../../img/图标316.png"></router-link></li>
 			</ul>
 			<ol>
 				<li><span>认识的人</span></li>
@@ -91,7 +91,7 @@
 		border-bottom: #e6e7e9 solid 0.0625rem;
 	}
 
-	.nearby ul li img {
+	.nearby ul li a>img {
 		width: 3rem;
 		height: 3rem;
 	}

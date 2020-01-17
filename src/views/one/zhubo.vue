@@ -14,10 +14,12 @@
             <i class="iconfont icon-yinle"></i>
             <p>电台分类</p>
           </div>
-          <div class="sort-con">
+          <router-link :to="{name:'ranking'}">
+            <div class="sort-con">
             <i class="iconfont icon-paihangbang"></i>
             <p>电台排行</p>
           </div>
+          </router-link>
         </div>
 
         <!-- 每天听些好节目 -->
