@@ -28,7 +28,7 @@
             </div>
 
             <div>
-              <span>248&nbsp;&nbsp;&nbsp;></span>
+              <span>28&nbsp;&nbsp;&nbsp;></span>
             </div>
           </li>
           <li>
@@ -38,7 +38,7 @@
             </div>
 
             <div>
-              <span>248&nbsp;&nbsp;&nbsp;></span>
+              <span>300&nbsp;&nbsp;&nbsp;></span>
             </div>
           </li>
           <li>
@@ -48,7 +48,7 @@
             </div>
 
             <div>
-              <span>248&nbsp;&nbsp;&nbsp;></span>
+              <span>51&nbsp;&nbsp;&nbsp;></span>
             </div>
           </li>
           <li>
@@ -58,7 +58,7 @@
             </div>
 
             <div>
-              <span>248&nbsp;&nbsp;&nbsp;></span>
+              <span>1&nbsp;&nbsp;&nbsp;></span>
             </div>
           </li>
         </ul>
@@ -110,7 +110,7 @@ export default {
           'http://localhost:3000/user/playlist?uid=' + this.$cookies.get('id')
         )
         .then(res => {
-          console.log(res.data.playlist);
+          // console.log(res.data.playlist);
 
           this.list = res.data.playlist
         })

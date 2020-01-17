@@ -23,7 +23,9 @@
 		<div class="router-view">
 			<router-view></router-view>
 		</div>
+		<div class="lala">
 		<Footer></Footer>
+		</div>
 	</div>
 </template>
 
@@ -41,6 +43,9 @@
 </script>
 
 <style scoped>
+	.lala{
+		min-height: 3rem;
+	}
 	.router-view {
 		flex: 1;
 		overflow-y: auto;

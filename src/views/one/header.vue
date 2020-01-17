@@ -9,8 +9,9 @@
         placeholder="搜索音乐、歌词、电台"
       />
       </router-link>
-
+      <router-link tag="em" to="/play">
       <em class="iconfont icon-paihangbang"></em>
+      </router-link>
     </div>
 
     <div class="nav">

@@ -52,6 +52,11 @@ export default [
     path:"/mvitem",
     name:"mvItem",
     component:()=>import("@/views/one/mvItem.vue")
+  },
+  {
+    path:"/phItem",
+    name:'phItem',
+    component:()=>import('@/views/one/PHitem.vue')
   }
 
 
