@@ -7,16 +7,16 @@
     <div class="input_1">
       <img class="img" src="../../../images/phone.png" alt />
       <em>+86</em>
-      <input class="ipt1" ref="ipp1" placeholder="手机号" type="text" />
+      <input  class="ipt1" ref="ipp1" placeholder="手机号" type="text" />
     </div>
     <div class="input_3">
       <img class="img" src="../../../images/yaoshi.png" alt />
-      <input class="ipt3" ref="code" placeholder="输入验证码" type="text" />
+      <input  class="ipt3" ref="code" placeholder="输入验证码" type="text" />
       <button @click="login" class="huoqu_btn">获取验证码</button>
     </div>
     <div class="input_2">
       <img class="img_1" src="../../../images/password.png" alt />
-      <input class="ipt2" ref="passwords" placeholder="设置登陆密码,不少于6位" type="password" />
+      <input  class="ipt2" ref="passwords" placeholder="设置登陆密码,不少于6位" type="password" />
     </div>
     <div class="input_4">
       <img class="img_1" src="../../../images/password.png" alt />
@@ -72,6 +72,15 @@ export default {
       +"&nickname="+this.$refs.name.value)
       .then(res=>{
         console.log(res)
+        if(res.data.code==200){
+          alert('注册成功')
+          location.href='http://localhost:8080/phonelogin.vue#/phone'
+          this.$refs.ipp1.value=''
+          this.$refs.code.value=''
+          this.$refs.passwords.value=''
+          this.$refs.name.value=''
+        }
+
       })
     }
   }
