@@ -28,7 +28,7 @@
             </div>
 
             <div>
-              <span>248&nbsp;&nbsp;&nbsp;></span>
+              <span>28&nbsp;&nbsp;&nbsp;></span>
             </div>
           </li>
           <li>
@@ -38,7 +38,7 @@
             </div>
 
             <div>
-              <span>248&nbsp;&nbsp;&nbsp;></span>
+              <span>300&nbsp;&nbsp;&nbsp;></span>
             </div>
           </li>
           <li>
@@ -48,7 +48,7 @@
             </div>
 
             <div>
-              <span>248&nbsp;&nbsp;&nbsp;></span>
+              <span>51&nbsp;&nbsp;&nbsp;></span>
             </div>
           </li>
           <li>
@@ -58,7 +58,7 @@
             </div>
 
             <div>
-              <span>248&nbsp;&nbsp;&nbsp;></span>
+              <span>1&nbsp;&nbsp;&nbsp;></span>
             </div>
           </li>
         </ul>
