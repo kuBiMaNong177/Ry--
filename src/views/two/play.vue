@@ -127,7 +127,7 @@ export default {
       this.play = !this.play
     }
   },
-  created() {
+  activated() {
     //从localStorage里面拿id， 赋值给musicId，让axios使用
     this.musicId = localStorage.getItem('id')
 

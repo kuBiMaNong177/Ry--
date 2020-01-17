@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <div class="naver">
     <div class="nav">
       <ul>
@@ -46,7 +45,6 @@
       </ul>
     </div>
     <!-- <div class="bofang">
-=======
 	<div class="naver">
 		<div class="nav">
 			<ul>
@@ -76,7 +74,6 @@
 			</ul>
 		</div>
 		<!-- <div class="bofang">
->>>>>>> f1d4f96c35fafa9d4cfce38bd3c9b1bfa191d8c5
 			<div class="datu">
 				<img src="https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4284518401,1515248953&fm=26&gp=0.jpg">
 				<p>#为喜欢的人做过的那些改变<br><span>xxx人参与</span></p>
@@ -314,7 +311,6 @@ export default {
 		top: 0.875rem;
 	}
  */
-<<<<<<< HEAD
 .dong h5 {
   margin-left: 3.75rem;
 }
@@ -340,7 +336,6 @@ export default {
 }
 
 /* .bofang {
-=======
 	.dong h5 {
 		margin-left: 3.75rem;
 	}
@@ -368,13 +363,12 @@ export default {
 	.dong .audio span{font-size: 0.625rem;margin-left:4rem ;}
 	.dong ul {
 		/* margin-top: 0.625rem; */
-		padding: 1.25rem;
+/* padding: 1.25rem;
 		display: flex;
 		justify-content: space-around;
-	}
+	} */
 
-	/* .bofang {
->>>>>>> f1d4f96c35fafa9d4cfce38bd3c9b1bfa191d8c5
+/* .bofang {
 		width: 100%;
 		height: 11.25rem;
 		margin-top: 20rem;
