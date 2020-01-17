@@ -64,7 +64,7 @@ export default {
       history.go(-1)
     }
   },
-  created() {
+  activated() {
     this.ids = this.$route.query.ids
     this.axios
       .get('http://localhost:3000/comment/music?id=' + this.ids)

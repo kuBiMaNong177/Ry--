@@ -1,8 +1,4 @@
 <template>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> lzm
   <div class="naver">
     <div class="nav">
       <ul>
@@ -49,10 +45,7 @@
       </ul>
     </div>
     <!-- <div class="bofang">
-<<<<<<< HEAD
-=======
-=======
->>>>>>> lzm
+
 	<div class="naver">
 		<div class="nav">
 			<ul>
@@ -81,11 +74,7 @@
 				<li><img src="@/img/图标308.png"><router-link to='project'>转发</router-link></li>
 			</ul>
 		</div>
-		<!-- <div class="bofang">
-<<<<<<< HEAD
->>>>>>> f1d4f96c35fafa9d4cfce38bd3c9b1bfa191d8c5
-=======
->>>>>>> lzm
+		<div class="bofang">
 			<div class="datu">
 				<img src="https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4284518401,1515248953&fm=26&gp=0.jpg">
 				<p>#为喜欢的人做过的那些改变<br><span>xxx人参与</span></p>
@@ -209,8 +198,6 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
-<<<<<<< HEAD
 .nav {
   background-color: red;
   border-bottom: #eeeff0 0.25rem solid;
@@ -387,10 +374,7 @@ export default {
 		top: 0.875rem;
 	}
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> lzm
+
 .dong h5 {
   margin-left: 3.75rem;
 }
@@ -452,8 +436,7 @@ export default {
 		justify-content: space-around;
 	} */
 
-<<<<<<< HEAD
-	/* .bofang {
+/* .bofang {
 >>>>>>> f1d4f96c35fafa9d4cfce38bd3c9b1bfa191d8c5
 =======
 /* .bofang {
